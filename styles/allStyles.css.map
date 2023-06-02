@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAEA,IAAK,CACD,gBAAgB,CCHZ,GAAG",
+"sources": ["navigation.scss","variables.scss"],
 "names": [],
 "file": "allStyles.css"
 }
