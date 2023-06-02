@@ -11,8 +11,8 @@
 .content .content__list .content__item {
   color: green;
 }
-.content .content__list.active {
-  background-color: blue;
+.content .content__list .content__item:hover, .content .content__list .content__item:focus {
+  color: blue;
 }
 
 /*# sourceMappingURL=allStyles.css.map */

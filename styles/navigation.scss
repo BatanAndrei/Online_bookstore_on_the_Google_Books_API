@@ -13,10 +13,11 @@
 
         .content__item {
             color: $color-item;
-        }
 
-        &.active {
-            background-color: blue;
+            &:hover, &:focus {
+                color: blue;
+            }
         }
     }
 };
+
