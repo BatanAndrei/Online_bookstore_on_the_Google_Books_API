@@ -1,12 +1,12 @@
 {
-    "name": "online_bookstore_on_the_google_books_api",
+    "name": "online bookstore",
     "version": "1.0.0",
-    "description": "",
+    "description": "online bookstore on the google books api",
     "main": "index.js",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
-    "author": "",
+    "author": "Batan Andrei",
     "license": "ISC"
   }
