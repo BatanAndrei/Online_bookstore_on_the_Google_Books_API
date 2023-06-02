@@ -1,5 +1,5 @@
 {
-    "name": "online bookstore",
+    "name": "online_bookstore_on_the_google_books_api",
     "version": "1.0.0",
     "description": "online bookstore on the google books api",
     "main": "index.js",
@@ -8,8 +8,5 @@
     },
     "keywords": [],
     "author": "Batan Andrei",
-    "license": "ISC",
-    "dependencies": {
-        "express": "^4.18.2"
-    }
+    "license": "ISC"
 }
