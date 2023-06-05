@@ -18,12 +18,15 @@
         "css-minimizer-webpack-plugin": "^5.0.0",
         "eslint": "^8.42.0",
         "eslint-webpack-plugin": "^4.0.1",
+        "javascript-obfuscator": "^4.0.2",
         "mini-css-extract-plugin": "^2.7.6",
         "sass": "^1.62.1",
         "sass-loader": "^13.3.1",
         "style-loader": "^3.3.3",
         "webpack": "^5.85.0",
+        "webpack-bundle-analyzer": "^4.9.0",
         "webpack-cli": "^5.1.1",
-        "webpack-dev-server": "^4.15.0"
+        "webpack-dev-server": "^4.15.0",
+        "webpack-obfuscator": "^3.5.1"
     }
 }

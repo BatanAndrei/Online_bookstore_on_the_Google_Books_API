@@ -1,7 +1,8 @@
-let path = require('path');  //библиотека для пути (js)
+const path = require('path');  //библиотека для пути (js)
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // для плагина css, стили прописываются в отдельном файле, а не в тэге
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin"); // минимизатор для scc
 const ESLintPlugin = require('eslint-webpack-plugin'); // для ESlint
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin; //bundle analyzer
 
 module.exports = {
     entry: path.resolve(__dirname, "index.js"),    //исходный файл
@@ -10,20 +11,20 @@ module.exports = {
         filename: "main.js",                      // all.js называем файл в котором собираем
     },
     mode: "development",    // переключение между Dev и Prod и будет ли собранный файл минифицирован (dev=norm, prod=minific...)
-    plugins: [new MiniCssExtractPlugin(), new ESLintPlugin({fix: true})], // вместо (options) прописываем ({fix: true})
+    plugins: [new MiniCssExtractPlugin(), new ESLintPlugin({fix: true}), new BundleAnalyzerPlugin()], // вместо (options) прописываем ({fix: true})
     devServer: {
       static: {
         directory: path.join(__dirname, "bundle"), //webserver 
       },
     },
-    devtool: 'source-map',
+    devtool: 'source-map', //создаёт файлы .map
     module: {
         rules: [            // правила для сборщикак css
           { test: /\.scss$/i,       // regExp для пропуска определённых файлов
            use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'] }  // с начало преобразовывает css-loader, потом style-loader
         ]
       },
-      optimization: {   //этим свойством мы переписываем дефолтные настройки, необходимо дописать - '...'
+      optimization: {   //этим свойством мы переписываем дефолтные настройки, необходимо дописать в minimizer - '...'
         minimizer: [
           '...',        // это означает что мы дополняем конфиг, а не перезаписываем (например js минификацию)
           new CssMinimizerPlugin(),
