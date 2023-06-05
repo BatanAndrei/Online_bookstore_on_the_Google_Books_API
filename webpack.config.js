@@ -7,11 +7,12 @@ module.exports = {
         path: path.resolve(__dirname, 'bundle'), //output называем папку в которую собираем
         filename: "bundle.js",                      // all.js называем файл в котором собираем
     },
-    mode: "development",    // переключение между Dev и Prod и будет собранный файл минифицирован (dev=norm, prod=minific...)
+    mode: "development",    // переключение между Dev и Prod и будет ли собранный файл минифицирован (dev=norm, prod=minific...)
+    plugins: [new MiniCssExtractPlugin()],
     module: {
         rules: [            // правила для сборщикак css
-          { test: /\.css$/,       // regExp для пропуска определённых файлов
-           use: ['style-loader', 'css-loader'] }  // с начало преобразовывает css-loader, потом style-loader
+          { test: /\.scss$/i,       // regExp для пропуска определённых файлов
+           use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'] }  // с начало преобразовывает css-loader, потом style-loader
         ]
       }
 };

@@ -1,4 +1,4 @@
-import nav from "./js/navigation.js"; 
-import cont from "./js/content.js";
-import scc from "./dist/allStyles.css";
+import "./js/navigation.js"; 
+import "./js/content.js";
+import "./scss/allStyles.scss";
 
