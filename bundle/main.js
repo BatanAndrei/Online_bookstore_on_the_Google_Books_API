@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("First file bundle"),console.log("Second file bundle")})();
