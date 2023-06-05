@@ -16,7 +16,7 @@ module.exports = {
         directory: path.join(__dirname, "bundle"), //webserver 
       },
     },
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
     module: {
         rules: [            // правила для сборщикак css
           { test: /\.scss$/i,       // regExp для пропуска определённых файлов
