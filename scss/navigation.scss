@@ -22,9 +22,9 @@
 
 .navigation {
     display: flex;
-    width: $width-content;
     align-items: center;
     justify-content: space-around;
+    width: $width-content;
     height: 116px;
     border: $border;
 
@@ -43,14 +43,12 @@
         }
 
         .nav-links {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @include navigation-flex;
             width:371px;
             height: 12px;
             padding: 0px;
 
-            .nav-links__font-books {
+            .nav-links_item-books {
                 font-family: 'Montserrat-B';
                 font-style: normal;
                 font-weight: 900;
@@ -63,13 +61,13 @@
                     }
             }
     
-            .nav-links__font {
+            .nav-links_items {
                 font-family: 'Montserrat';
                 font-style: normal;
                 font-weight: 700;
                 @include nav-links-text;
                 
-                    .nav-links__decoration {
+                    .nav-links__decoration-items {
                         text-decoration: none;
                         cursor: pointer;
                         color: #5C6A79;
@@ -78,8 +76,29 @@
         }
 
         .nav-info {
+            @include navigation-flex;
             width: 121px;
             height: 13px;
-            border: $border;
+        
+            .nav-info_user {
+                width: 12px;
+                height: 15px;
+                @include nav-info-setting;
+                background-image: url(../svg/user.svg);
+            }
+
+            .nav-info_search {
+                width: 15px;
+                height: 14.71px;
+                @include nav-info-setting;
+                background-image: url(../svg/search.svg);
+            }
+
+            .nav-info_cart {
+                width: 13.68px;
+                height: 17px;
+                @include nav-info-setting;
+                background-image: url(../svg/shop\ bag.svg);
+            }
         }
 }

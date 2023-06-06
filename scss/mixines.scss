@@ -4,3 +4,16 @@
     text-transform: uppercase;
     list-style: none;
 }
+
+@mixin navigation-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin nav-info-setting {
+    border: none;
+    cursor: pointer;
+    background-color: white;
+                
+}
