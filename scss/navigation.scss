@@ -14,7 +14,7 @@
     justify-content: space-around;
     width: $width-content;
     height: 116px;
-    background-color: white;
+    background-color: $nav-background;
     z-index: 1;
     
         .nav-logo {
@@ -28,7 +28,7 @@
             font-weight: 700;
             font-size: 24px;
             line-height: 29px;
-            color: #1C2A39;
+            color: $nav-bold-font;
         }
 
         .nav-links {
@@ -46,7 +46,7 @@
                     .nav-links__decoration-books {
                         text-decoration: none;
                         cursor: pointer;
-                        color: #1C2A39;
+                        color: $nav-bold-font;
                     }
             }
     
@@ -59,7 +59,7 @@
                     .nav-links__decoration-items {
                         text-decoration: none;
                         cursor: pointer;
-                        color: #5C6A79;
+                        color: $nav-link-font;
                     }
             }
         }
