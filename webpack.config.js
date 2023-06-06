@@ -18,6 +18,12 @@ module.exports = {
            use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'] }  // с начало преобразовывает css-loader, потом style-loader
         ]
       },
+      devServer: {
+        static: {
+          directory: path.join(__dirname, 'bundle'), //webserver 
+        },
+      },
+  
       optimization: {   //этим свойством мы переписываем дефолтные настройки, необходимо дописать в minimizer - '...'
         minimizer: [
           '...',        // это означает что мы дополняем конфиг, а не перезаписываем (например js минификацию)
