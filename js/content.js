@@ -1,5 +1,13 @@
-/* export default function cont() {
-    console.log('Second file bundle');
-}
+import {navigation, arr} from './navigation'; 
 
-cont(); */
+
+export function content() {
+    console.log('Hello content 6');
+};
+
+content();
+
+
+
+
+

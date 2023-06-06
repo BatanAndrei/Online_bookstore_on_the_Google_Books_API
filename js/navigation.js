@@ -1,6 +1,9 @@
-/* export default function nav() {
-    console.log('First file bundle');
-}
+export function navigation() {
+    console.log('Hello navigation 6');
+};
 
-nav(); */
+navigation();
 
+export let arr = [1, 2, 3, 4, 6]
+
+console.log(arr)

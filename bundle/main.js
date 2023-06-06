@@ -1,6 +1,24 @@
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./index.js":
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_allStyles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/allStyles.scss */ \"./scss/allStyles.scss\");\n/* harmony import */ var _js_content__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/content */ \"./js/content.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://online_bookstore_on_the_google_books_api/./index.js?");
+
+/***/ }),
 
 /***/ "./js/content.js":
 /*!***********************!*\
@@ -8,15 +26,7 @@
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ cont)
-/* harmony export */ });
-function cont() {
-    console.log('Second file bundle');
-}
-
-cont();
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   content: () => (/* binding */ content)\n/* harmony export */ });\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navigation */ \"./js/navigation.js\");\n \r\n\r\n\r\nfunction content() {\r\n    console.log('Hello content 6');\r\n};\r\n\r\ncontent();\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://online_bookstore_on_the_google_books_api/./js/content.js?");
 
 /***/ }),
 
@@ -26,15 +36,7 @@ cont();
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ nav)
-/* harmony export */ });
-function nav() {
-    console.log('First file bundle');
-}
-
-nav();
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   arr: () => (/* binding */ arr),\n/* harmony export */   navigation: () => (/* binding */ navigation)\n/* harmony export */ });\nfunction navigation() {\r\n    console.log('Hello navigation 6');\r\n};\r\n\r\nnavigation();\r\n\r\nlet arr = [1, 2, 3, 4, 6]\r\n\r\nconsole.log(arr)\r\n\n\n//# sourceURL=webpack://online_bookstore_on_the_google_books_api/./js/navigation.js?");
 
 /***/ }),
 
@@ -44,9 +46,7 @@ nav();
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://online_bookstore_on_the_google_books_api/./scss/allStyles.scss?");
 
 /***/ })
 
@@ -106,23 +106,11 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-(() => {
-/*!******************!*\
-  !*** ./index.js ***!
-  \******************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _js_navigation_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/navigation.js */ "./js/navigation.js");
-/* harmony import */ var _js_content_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/content.js */ "./js/content.js");
-/* harmony import */ var _scss_allStyles_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/allStyles.scss */ "./scss/allStyles.scss");
-
-
-
-
-
-})();
-
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = __webpack_require__("./index.js");
+/******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.js.map
