@@ -8,7 +8,7 @@
     width: $width-content;
     max-height: $height-content-main;
     
-    .slider {
+    .container-slider {
         position: relative;
         top: 110px;
         width: 1120px;
@@ -16,7 +16,7 @@
         border: $border;
     }
 
-    .dots {
+    .container-dots {
         position: relative;
         top: 110px;
         width: $width-content;
