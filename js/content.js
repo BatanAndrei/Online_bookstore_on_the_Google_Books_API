@@ -1,11 +1,12 @@
-import {navigation, arr} from './navigation'; 
-
+import {navigation} from './navigation'; 
 
 export function content() {
-    console.log('Hello content 30');
+    console.log('Hello content 3');
 }
 
 content();
+
+
 
 
 

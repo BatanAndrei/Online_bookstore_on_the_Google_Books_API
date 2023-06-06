@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scs
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   content: () => (/* binding */ content)\n/* harmony export */ });\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navigation */ \"./js/navigation.js\");\n \r\n\r\n\r\nfunction content() {\r\n    console.log('Hello content 3');\r\n}\r\n\r\ncontent();\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://online_bookstore_on_the_google_books_api/./js/content.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   content: () => (/* binding */ content)\n/* harmony export */ });\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navigation */ \"./js/navigation.js\");\n \r\n\r\nfunction content() {\r\n    console.log('Hello content 30');\r\n}\r\n\r\ncontent();\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://online_bookstore_on_the_google_books_api/./js/content.js?");
 
 /***/ }),
 
@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   arr: () => (/* binding */ arr),\n/* harmony export */   navigation: () => (/* binding */ navigation)\n/* harmony export */ });\nfunction navigation() {\r\n    console.log('Hello navigation 4');\r\n}\r\n\r\nnavigation();\r\n\r\nlet arr = [];\r\n\r\narr = [1, 2, 3, 4, ];\r\n\r\nconsole.log(arr);\r\n\n\n//# sourceURL=webpack://online_bookstore_on_the_google_books_api/./js/navigation.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   navigation: () => (/* binding */ navigation)\n/* harmony export */ });\nfunction navigation() {\r\n    console.log('Hello navigation 40');\r\n}\r\n\r\nnavigation();\r\n\r\n\r\n\n\n//# sourceURL=webpack://online_bookstore_on_the_google_books_api/./js/navigation.js?");
 
 /***/ }),
 
