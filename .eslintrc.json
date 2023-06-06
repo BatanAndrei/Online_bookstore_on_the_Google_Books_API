@@ -11,6 +11,7 @@
         "sourceType": "module"
     },
     "rules": {
-        "semi": "error"
+        "semi": "error",
+        "no-unused-vars": ["off",{ "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
     }
 }
