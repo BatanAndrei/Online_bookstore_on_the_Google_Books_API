@@ -1,25 +1,24 @@
 @import 'variables';
+@import 'mixines';
 
-/* .content {
-    width: 300px;
-    height: 300px;
-    border: $border-content;
+@font-face {
+    src: url('../fonts/Montserrat-Regular.ttf');
+    font-family: "Montserrat";
+}
 
-    .content__list {
-        width: 100px;
-        height: 100px;
-        border: $border-content;
+@font-face {
+    src: url('../fonts/Montserrat-Bold.ttf');
+    font-family: "Montserrat-B";
+}
 
-        .content__item {
-            color: $color-item;
+@font-face {
+    src: url('../fonts/OpenSans-Regular.ttf');
+    font-family: "OpenSans";
+}
 
-            &:hover, &:focus {
-                color: $color;
-            }
-        }
-    }
-};
- */
+* {
+    box-sizing: border-box;
+}
 
 .navigation {
     display: flex;
@@ -32,13 +31,50 @@
         .nav-logo {
             width: 128px;
             height: 29px;
-            border: $border;
+        }
+
+        .nav-logo__font {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #1C2A39;
         }
 
         .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             width:371px;
             height: 12px;
-            border: $border;
+            padding: 0px;
+
+            .nav-links__font-books {
+                font-family: 'Montserrat-B';
+                font-style: normal;
+                font-weight: 900;
+                @include nav-links-text;
+                
+                    .nav-links__decoration-books {
+                        text-decoration: none;
+                        cursor: pointer;
+                        color: #1C2A39;
+                    }
+            }
+    
+            .nav-links__font {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                @include nav-links-text;
+                
+                    .nav-links__decoration {
+                        text-decoration: none;
+                        cursor: pointer;
+                        color: #5C6A79;
+                    }
+            }
         }
 
         .nav-info {
