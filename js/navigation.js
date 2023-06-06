@@ -1,11 +1,11 @@
 export function navigation() {
-    console.log('Hello navigation 3');
+    console.log('Hello navigation 4');
 }
 
 navigation();
 
 export let arr = [];
 
-arr = [1, 2, 3, 4, 6];
+arr = [1, 2, 3, 4, ];
 
 console.log(arr);
