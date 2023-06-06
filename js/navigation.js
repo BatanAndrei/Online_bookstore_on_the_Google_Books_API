@@ -1,5 +1,6 @@
-export default function nav() {
+/* export default function nav() {
     console.log('First file bundle');
 }
 
-nav();
+nav(); */
+

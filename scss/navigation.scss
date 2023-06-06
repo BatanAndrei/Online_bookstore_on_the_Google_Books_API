@@ -1,7 +1,6 @@
 @import 'variables';
 
-
-.content {
+/* .content {
     width: 300px;
     height: 300px;
     border: $border-content;
@@ -20,4 +19,31 @@
         }
     }
 };
+ */
 
+.navigation {
+    display: flex;
+    width: $width-content;
+    align-items: center;
+    justify-content: space-around;
+    height: 116px;
+    border: $border;
+
+        .nav-logo {
+            width: 128px;
+            height: 29px;
+            border: $border;
+        }
+
+        .nav-links {
+            width:371px;
+            height: 12px;
+            border: $border;
+        }
+
+        .nav-info {
+            width: 121px;
+            height: 13px;
+            border: $border;
+        }
+}

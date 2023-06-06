@@ -1,5 +1,5 @@
-export default function cont() {
+/* export default function cont() {
     console.log('Second file bundle');
 }
 
-cont();
+cont(); */
