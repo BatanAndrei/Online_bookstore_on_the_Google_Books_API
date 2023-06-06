@@ -2,7 +2,25 @@
 @import 'navigation';
 
 .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: $width-content;
     max-height: $height-content-main;
-    border: $border;
+    
+    .slider {
+        position: relative;
+        top: 110px;
+        width: 1120px;
+        height: 702px;
+        border: $border;
+    }
+
+    .dots {
+        position: relative;
+        top: 110px;
+        width: $width-content;
+        height: 134px;
+        border: $border;
+    }
 }
