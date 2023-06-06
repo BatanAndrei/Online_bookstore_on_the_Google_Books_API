@@ -1,20 +1,6 @@
 @import 'variables';
 @import 'mixines';
-
-@font-face {
-    src: url('../fonts/Montserrat-Regular.ttf');
-    font-family: "Montserrat";
-}
-
-@font-face {
-    src: url('../fonts/Montserrat-Bold.ttf');
-    font-family: "Montserrat-B";
-}
-
-@font-face {
-    src: url('../fonts/OpenSans-Regular.ttf');
-    font-family: "OpenSans";
-}
+@import 'fonts';
 
 * {
     box-sizing: border-box;
