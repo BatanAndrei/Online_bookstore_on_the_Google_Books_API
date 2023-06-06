@@ -7,12 +7,17 @@
 }
 
 .navigation {
+    position: fixed;
+    top: 0px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: $width-content;
     height: 116px;
+    background-color: white;
+    z-index: 1;
     border: $border;
+    
 
         .nav-logo {
             width: 128px;
@@ -88,3 +93,5 @@
             }
         }
 }
+
+
