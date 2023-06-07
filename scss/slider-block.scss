@@ -1,5 +1,5 @@
 
-@import 'navigation';
+@import 'navigation-block';
 
 .main {
     display: flex;
@@ -8,16 +8,14 @@
     max-height: $height-content-main;
     
     .container-slider {
-        position: relative;
-        top: 110px;
+        @include position-blocks;
         left: 160px;
         width: 1120px;
         height: 702px;
     }
 
     .container-dots {
-        position: relative;
-        top: 110px;
+        @include position-blocks;
         width: $width-content;
         height: 134px;
     }
@@ -49,14 +47,14 @@
 }
 
 .promo {
-    position: relative;
-    top: 110px;
+    @include position-blocks;
     left: 160px;
     width: 160px;
     height: 702px;
 
     .promo_link {
         display: block;
+        cursor: pointer;
     
         .promo-1 {
         position: relative;
@@ -69,8 +67,8 @@
         }
 
         .promo-2 {
-            position: relative;
             background-size: cover;
+            position: relative;
             top: 136px;
             left: 5px;
             width: 137px;

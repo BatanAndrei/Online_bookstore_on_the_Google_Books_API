@@ -17,3 +17,8 @@
     background-color: white;
                 
 }
+
+@mixin position-blocks {
+    position: relative;
+    top: 110px;
+}
