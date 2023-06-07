@@ -27,7 +27,7 @@
             font-weight: $font-700;
             font-size: 24px;
             line-height: 29px;
-            color: $nav-bold-font;
+            color: $bold-font;
         }
 
         .nav-links {
@@ -45,7 +45,7 @@
                     .nav-links__decoration-books {
                         text-decoration: none;
                         cursor: pointer;
-                        color: $nav-bold-font;
+                        color: $bold-font;
                     }
             }
     
@@ -57,7 +57,7 @@
                     .nav-links__decoration-items {
                         text-decoration: none;
                         cursor: pointer;
-                        color: $nav-link-font;
+                        color: $grey-font;
                     }
             }
         }
