@@ -16,6 +16,7 @@ export function initSlider(){
 
     initImage();
     initDots();
+    initAutoplay();
 
 
 function initImage() {
@@ -37,13 +38,20 @@ function initDots() {
     });
 };
 
-function moveSlider(num) {{
+function moveSlider(num) {
     sliderDots.querySelector('.active').classList.remove('active');
     sliderDots.querySelector('.n' + num).classList.add('active');
     sliderImages.querySelector('.active').classList.remove('active');
     sliderImages.querySelector('.n' + num).classList.add('active');
-        };
     };
+
+function initAutoplay() {
+    setInterval(() => {
+        let curNumber = +sliderImages.querySelector('.active').dataset.index;
+        let nextNumber = curNumber === images.length - 1? 0 : curNumber + 1;
+        moveSlider(nextNumber);
+    }, 3000)
+}
 };
 
 
