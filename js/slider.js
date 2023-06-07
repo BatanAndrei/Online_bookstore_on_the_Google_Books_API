@@ -41,9 +41,9 @@ function initDots() {                                  // рисуем точк�
 
 function initAutoplay() {                                          //автоперелистывание слайдера
     setInterval(() => {
-        let curNumber = +sliderImages.querySelector('.active').dataset.index;
-        let nextNumber = curNumber === images.length - 1 ? 0 : curNumber + 1;
-        moveSlider(nextNumber);
+        let curNumber = +sliderImages.querySelector('.active').dataset.index;  // находим текущий слайд
+        let nextNumber = curNumber === images.length - 1 ? 0 : curNumber + 1;  // определяем перелистывание по кругу
+        moveSlider(nextNumber);                                // передаём индекс в функцию поткаторому будет определяться клвсс active
     }, intervalSlider)
 }
 
