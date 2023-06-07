@@ -236,3 +236,29 @@
   height: 134px;
   border: 1px solid black;
 }
+
+/* .galery {
+
+    .image {
+        position: absolute;
+        background-size: cover;
+        background-position: center center;
+        width: 681px;
+        height: 484px;
+        opacity: 0;
+        transition: opacity 800ms ease;
+    }
+} */
+.container-slider .image {
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  width: 1120px;
+  height: 702px;
+  /* opacity: 0; */
+  transition: opacity 800ms ease;
+}
+
+/* .container-slider .image.active{
+    opacity: 1;
+  } */

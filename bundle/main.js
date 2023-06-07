@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scs
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   content: () => (/* binding */ content)\n/* harmony export */ });\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navigation */ \"./js/navigation.js\");\n \r\n\r\nfunction content() {\r\n    console.log('Hello content 30');\r\n}\r\n\r\ncontent();\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://online_bookstore_on_the_google_books_api/./js/content.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   images: () => (/* binding */ images),\n/* harmony export */   initSlider: () => (/* binding */ initSlider)\n/* harmony export */ });\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navigation */ \"./js/navigation.js\");\n \r\n\r\nlet images = [{\r\n    url: './images/banner 1.png',\r\n},{\r\n    url: './images/banner 2.png',\r\n},{\r\n    url: './images/banner 3.png',\r\n}];\r\n\r\nfunction initSlider(){\r\n    if(!images || !images.length) return;\r\n\r\n    let sliderImages = document.querySelector(\".container-slider\");\r\n    let sliderDots = document.querySelector(\".second-section_dot\");\r\n\r\n    initImage();\r\n\r\n\r\nfunction initImage() {\r\n    images.forEach((image, index) => {\r\n        let imageDiv = `<div class=\"image n${index} ${index === 0 ? \"active\" : \"\"}\" style=\"background-image:url('${images[index].url}');\" data-index=\"${index}\"></div>`;\r\n        sliderImages.innerHTML += imageDiv;\r\n        \r\n        console.log(imageDiv)\r\n    });\r\n};\r\n};\r\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function() {\r\n    initSlider();\r\n  });\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://online_bookstore_on_the_google_books_api/./js/content.js?");
 
 /***/ }),
 
@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   navigation: () => (/* binding */ navigation)\n/* harmony export */ });\nfunction navigation() {\r\n    console.log('Hello navigation 40');\r\n}\r\n\r\nnavigation();\r\n\r\n\r\n\n\n//# sourceURL=webpack://online_bookstore_on_the_google_books_api/./js/navigation.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   navigation: () => (/* binding */ navigation)\n/* harmony export */ });\nfunction navigation() {\r\n    console.log('Hello navigation 4');\r\n}\r\n\r\nnavigation();\r\n\r\n\r\n\n\n//# sourceURL=webpack://online_bookstore_on_the_google_books_api/./js/navigation.js?");
 
 /***/ }),
 
