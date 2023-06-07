@@ -49,9 +49,11 @@ function moveSlider(num) {
 function initAutoplay() {
     setInterval(() => {
         let curNumber = +sliderImages.querySelector('.active').dataset.index;
-        let nextNumber = curNumber === images.length - 1? 0 : curNumber + 1;
+        let nextNumber = curNumber === images.length - 1 ? 0 : curNumber + 1;
         moveSlider(nextNumber);
+        console.log(curNumber)
     }, intervalSlider)
+    
 }
 };
 
