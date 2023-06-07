@@ -25,18 +25,43 @@
     }
 }
 
-.container-slider .image{
-    position: absolute;
-    background-size: cover;
-    background-position: center;
-    width: 1120px;
-    height: 702px;
-    opacity: 0;
-    transition: opacity 800ms ease;
+.container-slider {
 
-    
+    .image{
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        width: 1120px;
+        height: 702px;
+        opacity: 0;
+        transition: opacity 800ms ease;
+
+    }
 }
 
-.container-slider .image.active{
-    opacity: 1;
-  }
+.container-slider {
+
+    .image.active{
+        opacity: 1;
+    }
+
+    .active{
+        opacity: 1;
+    }
+}
+
+
+.container-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10PX;
+    .dot {
+        position: relative;
+        top: 17PX;
+        width: 12px;
+        height: 12px;
+        background-image: url(../svg/Dotgrey.svg);
+        cursor: pointer;
+    }
+}
+
