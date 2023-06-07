@@ -4,8 +4,6 @@
 .main {
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: column; */
-    /* align-items: center; */
     width: $width-content;
     max-height: $height-content-main;
     
@@ -41,7 +39,7 @@
 
 .container-slider {
     background-color: #FFE0E2;
-    
+
     .image {
 
         &.active{
@@ -57,7 +55,10 @@
     width: 160px;
     height: 702px;
 
-    .promo-1 {
+    .promo_link {
+        display: block;
+    
+        .promo-1 {
         position: relative;
         background-size: cover;
         top: 99px;
@@ -65,17 +66,18 @@
         width: 149px;
         height: 204px;
         background-image: url(../images/promo\ 1.png);
-    }
+        }
 
-    .promo-2 {
-        position: relative;
-        background-size: cover;
-        top: 136px;
-        left: 5px;
-        width: 137px;
-        height: 273px;
-        background-image: url(../images/promo\ 2.png);
-    }
+        .promo-2 {
+            position: relative;
+            background-size: cover;
+            top: 136px;
+            left: 5px;
+            width: 137px;
+            height: 273px;
+            background-image: url(../images/promo\ 2.png);
+        }
+    }  
 }
 
 .container-dots {
