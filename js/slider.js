@@ -1,4 +1,4 @@
-import {navigation} from './navigation'; 
+import {getting} from './books';
 
 export let images = [{
     url: './banner 1.png',
