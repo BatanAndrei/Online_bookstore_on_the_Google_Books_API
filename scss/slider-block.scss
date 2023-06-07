@@ -2,20 +2,23 @@
 @import 'navigation-block';
 
 .main {
+    @include position-blocks;
     display: flex;
     flex-wrap: wrap;
     width: $width-content;
-    max-height: $height-content-main;
+    height: $height-content-main;
+    background-color: $main-background;
     
     .container-slider {
-        @include position-blocks;
+        position: relative;
         left: 160px;
         width: 1120px;
         height: 702px;
     }
 
     .container-dots {
-        @include position-blocks;
+        position: relative;
+        top: -40px;
         width: $width-content;
         height: 134px;
     }
@@ -47,7 +50,7 @@
 }
 
 .promo {
-    @include position-blocks;
+   position: relative;
     left: 160px;
     width: 160px;
     height: 702px;
@@ -81,7 +84,7 @@
 .container-dots {
     display: flex;
     justify-content: center;
-    gap: 10PX;
+    column-gap: 10PX;
 
     .dot {
         position: relative;

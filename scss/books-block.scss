@@ -1,11 +1,12 @@
 @import 'slider-block';
 
 .container-category {
+    position: relative;
+    top: -80px;
     display: flex;
-    @include position-blocks;
     width: $width-content;
-    height: 1353px;
-
+    height: 1146px;
+    
     .category-books {
         width: 416px;
         height: 710px;
@@ -13,12 +14,13 @@
 
         .category-books_list {
             position: relative;
+            top: 30px;
             left: 88px;
             list-style: none;
             cursor: pointer;
 
             .category-books_item {
-                padding: 12px;
+                padding: 11px;
                 @include montserrat-normal;
                 font-weight: $font-500;
                 font-size: 12px;
@@ -31,8 +33,15 @@
     .price-books {
         position: relative;
         left: -60px;
-        width: 1084px;
-        height: 1353px;
+        width: 1024px;
+        height: 1146px;
         border: $border;
     }
+}
+
+.btn {
+    position: relative;
+    top: -40px;
+    left: 741px;
+    @include button;
 }
