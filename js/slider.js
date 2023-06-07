@@ -12,9 +12,10 @@ export function initSlider(){
     if(!images || !images.length) return;
 
     let sliderImages = document.querySelector(".container-slider");
-    let sliderDots = document.querySelector(".second-section_dot");
+    let sliderDots = document.querySelector(".container-dots");
 
     initImage();
+    initDots();
 
 
 function initImage() {
@@ -23,6 +24,15 @@ function initImage() {
         sliderImages.innerHTML += imageDiv;
         
         console.log(imageDiv)
+    });
+};
+
+function initDots() {
+    images.forEach((image, index) => {
+        let dot = `<div class="dot n${index} ${index ===0 ? "active" : ""}" data-index="${index}"></div>`;
+        sliderDots.innerHTML += dot;
+
+        console.log(dot)
     });
 };
 };
