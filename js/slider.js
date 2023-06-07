@@ -34,8 +34,23 @@ function initDots() {
 
         console.log(dot)
     });
+    sliderDots.querySelectorAll('.dot').forEach(dot => {
+        dot.addEventListener("click", function() {
+            moveSlider(this.dataset.index);
+        });
+    });
 };
+
+function moveSlider(num) {{
+    sliderDots.querySelector('.active').classList.remove('active');
+    sliderDots.querySelector('.n' + num).classList.add('active');
+    sliderImages.querySelector('.active').classList.remove('active');
+    sliderImages.querySelector('.n' + num).classList.add('active');
+        };
+    };
 };
+
+
 
 
 
