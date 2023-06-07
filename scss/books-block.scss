@@ -1,6 +1,6 @@
 @import 'slider-block';
 
-.container-books {
+.container-category {
     display: flex;
     @include position-blocks;
     width: $width-content;
@@ -12,13 +12,18 @@
         background-color: #EFEEF6;
 
         .category-books_list {
+            position: relative;
+            left: 88px;
             list-style: none;
             cursor: pointer;
 
             .category-books_item {
+                padding: 12px;
                 @include montserrat-normal;
                 font-weight: $font-500;
-                color: #5C6A79;
+                font-size: 12px;
+                line-height: 15px;
+                color: $nav-link-font;
             }
         }
     }
