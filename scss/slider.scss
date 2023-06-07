@@ -41,8 +41,11 @@
 
 .container-slider {
 
-    .image.active{
+    .image {
+
+        &.active{
         opacity: 1;
+        }
     }
 }
 
@@ -60,7 +63,10 @@
     }
 }
 
-.dot.active {
+.dot {
+
+    &.active {
     background-image: url(../svg/Dotdarkgrey.svg);
+    }
 }
 
