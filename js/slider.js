@@ -22,8 +22,6 @@ function initImage() {
     images.forEach((image, index) => {
         let imageDiv = `<div class="image n${index} ${index === 0 ? "active" : ""}" style="background-image:url('${images[index].url}');" data-index="${index}"></div>`;
         sliderImages.innerHTML += imageDiv;
-        
-        console.log(imageDiv)
     });
 };
 
@@ -31,8 +29,6 @@ function initDots() {
     images.forEach((image, index) => {
         let dot = `<div class="dot n${index} ${index ===0 ? "active" : ""}" data-index="${index}"></div>`;
         sliderDots.innerHTML += dot;
-
-        console.log(dot)
     });
     sliderDots.querySelectorAll('.dot').forEach(dot => {
         dot.addEventListener("click", function() {
