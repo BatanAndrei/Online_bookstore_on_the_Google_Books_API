@@ -1,8 +1,22 @@
 @import 'slider-block';
 
 .container-books {
+    display: flex;
     @include position-blocks;
     width: $width-content;
     height: 1353px;
-    border: $border;
+
+    .category-books {
+        width: 416px;
+        height: 710px;
+        background-color: #EFEEF6;
+    }
+
+    .price-books {
+        position: relative;
+        left: -60px;
+        width: 1084px;
+        height: 1353px;
+        border: $border;
+    }
 }
