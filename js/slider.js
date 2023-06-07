@@ -13,6 +13,7 @@ export function initSlider(){
 
     let sliderImages = document.querySelector(".container-slider");
     let sliderDots = document.querySelector(".container-dots");
+    let intervalSlider = 5000;
 
     initImage();
     initDots();
@@ -50,14 +51,9 @@ function initAutoplay() {
         let curNumber = +sliderImages.querySelector('.active').dataset.index;
         let nextNumber = curNumber === images.length - 1? 0 : curNumber + 1;
         moveSlider(nextNumber);
-    }, 3000)
+    }, intervalSlider)
 }
 };
-
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", function() {
     initSlider();
