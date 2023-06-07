@@ -10,6 +10,17 @@
         width: 416px;
         height: 710px;
         background-color: #EFEEF6;
+
+        .category-books_list {
+            list-style: none;
+            cursor: pointer;
+
+            .category-books_item {
+                @include montserrat-normal;
+                font-weight: $font-500;
+                color: #5C6A79;
+            }
+        }
     }
 
     .price-books {

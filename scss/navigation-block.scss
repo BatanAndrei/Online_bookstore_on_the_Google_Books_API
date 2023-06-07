@@ -23,9 +23,8 @@
         }
 
         .nav-logo__font {
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 700;
+            @include montserrat-normal;
+            font-weight: $font-700;
             font-size: 24px;
             line-height: 29px;
             color: $nav-bold-font;
@@ -40,7 +39,7 @@
             .nav-links_item-books {
                 font-family: 'Montserrat-B';
                 font-style: normal;
-                font-weight: 900;
+                font-weight: $font-900;
                 @include nav-links-text;
                 
                     .nav-links__decoration-books {
@@ -51,9 +50,8 @@
             }
     
             .nav-links_items {
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 700;
+                @include montserrat-normal;
+                font-weight: $font-700;
                 @include nav-links-text;
                 
                     .nav-links__decoration-items {

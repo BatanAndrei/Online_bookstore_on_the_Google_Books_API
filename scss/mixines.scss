@@ -22,3 +22,13 @@
     position: relative;
     top: 110px;
 }
+
+@mixin montserrat-normal {
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+
+@mixin opensans-normal {
+    font-family: 'OpenSans';
+    font-style: normal;
+}
