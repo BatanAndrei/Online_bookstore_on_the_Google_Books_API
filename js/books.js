@@ -16,7 +16,7 @@ export function initRequest() {
 
 // https://www.googleapis.com/books/v1/volumes?q="subject:Business"&key=<ваш ключ API>&printType=books&startIndex=0&maxResults=6&langRestrict=en
 
-        fetch(`https://www.googleapis.com/books/v1/volumes?${resultUrl}`, option)
+        fetch(`https://www.googleapis.com/books/v1/volumes?${resultUrl}`, options)
         .then((response) => {
           // Объект ответа на запрос
           console.log('response', response);

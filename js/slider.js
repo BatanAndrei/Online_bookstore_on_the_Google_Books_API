@@ -1,4 +1,4 @@
-import {getting} from './books';
+import {initRequest} from './books';
 
 export let images = [{
     url: './banner 1.png',
