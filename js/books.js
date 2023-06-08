@@ -2,7 +2,7 @@ export function initRequest() {
     const showCaseBooks = document.querySelector('.showecase-books');
 
     const params = new URLSearchParams(window.location.search);
-    params.set('q', '"subject:Architecture"');
+    params.set('q', 'subject:Architecture');
     params.set('key', 'AIzaSyA6rzxK7JdhGxWOanC61q6X0V7Ya71YS8E');
     params.set('printType', 'books');
     params.set('startIndex', 0);
