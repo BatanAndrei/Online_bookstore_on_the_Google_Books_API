@@ -28,8 +28,8 @@ export function initRequest() {
           let dataItems = data.items;
           
            dataItems.forEach(item => {
-              let books = `<div class="book">
-                                  <img class="" src="${item.volumeInfo.imageLinks.thumbnail}">    
+              let books = `<div class="books">
+                                  <img class="books_position" src="${item.volumeInfo.imageLinks.thumbnail}">    
                                 </div>`; 
                    
                                 console.log(item)

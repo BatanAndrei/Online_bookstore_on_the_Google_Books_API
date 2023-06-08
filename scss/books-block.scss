@@ -39,10 +39,16 @@
         height: 1146px;
         border: $border;
 
-        .book {
+        .books {
             width: 450px;
-            height: 327px;
+            height: 368px;
             border: $border;
+
+            .books_position {
+                margin-top: 40px;
+                width: 212px;
+                height: 320px;
+            }
         }
     }
 }
