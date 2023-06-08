@@ -30,12 +30,20 @@
         }
     }
 
-    .price-books {
+    .showecase-books {
+        display: flex;
+        flex-wrap: wrap;
         position: relative;
         left: -60px;
         width: 1024px;
         height: 1146px;
         border: $border;
+
+        .book {
+            width: 450px;
+            height: 327px;
+            border: $border;
+        }
     }
 }
 
@@ -45,3 +53,4 @@
     left: 741px;
     @include button;
 }
+

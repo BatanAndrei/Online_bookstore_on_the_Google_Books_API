@@ -1,10 +1,12 @@
 export function initRequest() {
+    const showCaseBooks = document.querySelector('.showecase-books');
+
     const params = new URLSearchParams(window.location.search);
     params.set('q', '"subject:Architecture"');
     params.set('key', 'AIzaSyA6rzxK7JdhGxWOanC61q6X0V7Ya71YS8E');
     params.set('printType', 'books');
     params.set('startIndex', 0);
-    params.set('maxResults', 6);
+    params.set('maxResults', 5);
     params.set('langRestrict', 'ru');
 
     let resultUrl = params.toString(); 
@@ -23,7 +25,21 @@ export function initRequest() {
         })
         .then((data) => {
           
-          console.log(data);
+          let dataItems = data.items;
+          
+           dataItems.forEach(item => {
+              let books = `<div class="book">
+                                  <img class="" src="${item.volumeInfo.imageLinks.thumbnail}">    
+                                </div>`; 
+                   
+                                console.log(item)
+              showCaseBooks.innerHTML += books;    
+        });  
+        
+          //console.log(resu);
         })
         .catch(() => { console.log('error') });
 }
+
+//data.items[0].volumeInfo.title
+//data.items[0].volumeInfo.imageLinks.thumbnail
