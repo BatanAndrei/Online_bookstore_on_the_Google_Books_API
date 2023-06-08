@@ -14,12 +14,6 @@ export function initRequest() {
             mode: 'cors'
         };
 
-// https://www.googleapis.com/books/v1/volumes?q="subject:Business"&key=<ваш ключ API>&printType=books&startIndex=0&maxResults=6&langRestrict=en
-
-// `https://www.googleapis.com/books/v1/volumes?${resultUrl}`, options
-
-// 'https://evilinsult.com/generate_insult.php?lang=en&type=json'
-
         fetch(`https://www.googleapis.com/books/v1/volumes?${resultUrl}`, options)
         .then((response) => {
           // Объект ответа на запрос
