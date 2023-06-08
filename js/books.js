@@ -5,7 +5,7 @@ export function initRequest() {
     params.set('printType', 'books');
     params.set('startIndex', 0);
     params.set('maxResults', 6);
-    params.set('langRestrict', 'en');
+    params.set('langRestrict', 'ru');
 
     let resultUrl = params.toString(); 
 
@@ -16,16 +16,13 @@ export function initRequest() {
 
         fetch(`https://www.googleapis.com/books/v1/volumes?${resultUrl}`, options)
         .then((response) => {
-          // Объект ответа на запрос
-          console.log('response', response);
-          // Превращаем объект в JSON. Мы не можем его сразу прочитать,
-          // надо отдать в следующий then
-          const result = response.json();
-          console.log('result', result);
+       
+          const result = response.json();  //запись нового promisa
+          
           return result;
         })
         .then((data) => {
-          // Объект результата в формате JSON
+          
           console.log(data);
         })
         .catch(() => { console.log('error') });
