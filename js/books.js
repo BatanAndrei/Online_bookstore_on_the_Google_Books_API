@@ -34,8 +34,6 @@ export function initRequest() {
                                     <h2 class="book-position_info-author">${item.volumeInfo?.authors}</h2>
                                     <h2 class="book-position_info-title">${item.volumeInfo?.title}</h2>
                                     <div class="${item.volumeInfo?.averageRating ? "rating-block" : "rating-block-none"}">
-
-
                                         <div class="${item.volumeInfo?.averageRating ? "rating-block_stars" : ""}">
                                             <div class="${item.volumeInfo?.averageRating === 1 ? "rating-block_stars__one" : ""}">
                                                 <div class="rating-block_stars__yellow"></div>
@@ -73,8 +71,6 @@ export function initRequest() {
                                                 <div class="rating-block_stars__yellow"></div>
                                             </div>
                                         </div>
-
-            
                                         <h2 class="${item.volumeInfo?.ratingsCount ? "rating-block_count" : "rating-block_count-none"}">${item.volumeInfo?.ratingsCount} review</h2>
                                     </div>
                                     <h2 class="${item.volumeInfo?.description ? "book-position_info-description" : "book-position_info-description-none"}">${item.volumeInfo?.description}</h2>
@@ -82,7 +78,6 @@ export function initRequest() {
                                     <button class="btn_buy-now" type="button">buy now</button>
                                 </div>
                             </div>`; 
-                   
             console.log(item)
             showCaseBooks.innerHTML += books;    
         });  
