@@ -39,7 +39,7 @@ export function initRequest() {
                                     </div>
                                     <h2 class="book-position_info-description">${item.volumeInfo?.description}</h2>
                                     <h2 class="book-position_info-sale">${item.saleInfo?.retailPrice?.amount}</h2>
-                                    <button class="btn_buy-now">buy now</button>
+                                    <button class="btn_buy-now" type="button">buy now</button>
                                 </div>
                             </div>`; 
                    
