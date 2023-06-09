@@ -6,8 +6,8 @@ export function initRequest() {
     params.set('key', 'AIzaSyA6rzxK7JdhGxWOanC61q6X0V7Ya71YS8E');
     params.set('printType', 'books');
     params.set('startIndex', 0);
-    params.set('maxResults', 6);
-    params.set('langRestrict', 'ru');
+    params.set('maxResults', 30);
+    params.set('langRestrict', 'en');
 
     let resultUrl = params.toString(); 
 
@@ -25,7 +25,7 @@ export function initRequest() {
         })
         .then((data) => {
           
-          let dataItems = data.items;
+          const dataItems = data.items;
           
            dataItems.forEach(item => {
               let books = `<div class="book-position">
@@ -33,7 +33,10 @@ export function initRequest() {
                                 <div class="book-position_info">
                                     <h2 class="book-position_info-author">${item.volumeInfo?.authors}</h2>
                                     <h2 class="book-position_info-title">${item.volumeInfo?.title}</h2>
-                                    <div class="rating-block"></div>
+                                    <div class="rating-block">
+                                        <div class="rating-block_stars">${item.volumeInfo?.averageRating}</div>
+                                        <div class="rating-block_count">${item.volumeInfo?.ratingsCount}</div>
+                                    </div>
                                     <h2 class="book-position_info-description">${item.volumeInfo?.description}</h2>
                                 </div>
                             </div>`; 
@@ -47,5 +50,3 @@ export function initRequest() {
         .catch(() => { console.log('error') });
 }
 
-//data.items[0].volumeInfo.title
-//data.items[0].volumeInfo.imageLinks.thumbnail

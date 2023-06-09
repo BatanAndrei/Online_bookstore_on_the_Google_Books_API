@@ -88,6 +88,19 @@
                     width: 176px;
                     height: 15px;
                     border: $border;
+
+                    .rating-block_stars {
+                        width: 65px;
+                        height: 15px;
+                        border: $border;
+                    }
+
+                    .rating-block_count {
+                        margin-left: 6px;
+                        width: 55px;
+                        height: 15px;
+                        border: $border;
+                    }
                 }
 
                 .book-position_info-description {
