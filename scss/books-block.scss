@@ -97,8 +97,13 @@
 
                     .rating-block_count {
                         margin-left: 6px;
-                        width: 55px;
+                        width: 100px;
                         height: 15px;
+                        @include opensans-normal;
+                        font-weight: 400;
+                        font-size: 10px;
+                        line-height: 14px;
+                        color: $grey-font;
                         border: $border;
                     }
                 }
