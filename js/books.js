@@ -81,8 +81,6 @@ export function initRequest() {
             console.log(item)
             showCaseBooks.innerHTML += books;    
         });  
-        
-          //console.log(resu);
         })
         .catch(() => { console.log('error') });
 }
