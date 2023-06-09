@@ -7,7 +7,7 @@ export function initRequest() {
     params.set('printType', 'books');
     params.set('startIndex', 0);
     params.set('maxResults', 6);
-    params.set('langRestrict', 'ru');
+    params.set('langRestrict', 'en');
 
     let resultUrl = params.toString(); 
 
@@ -38,7 +38,7 @@ export function initRequest() {
                                         <h2 class="rating-block_count">${item.volumeInfo?.ratingsCount} review</h2>
                                     </div>
                                     <h2 class="book-position_info-description">${item.volumeInfo?.description}</h2>
-                                    <h2 class="book-position_info-sale">${item.saleInfo?.retailPrice?.amount}</h2>
+                                    <h2 class="book-position_info-sale">&#36; ${item.saleInfo?.retailPrice?.amount}</h2>
                                     <button class="btn_buy-now" type="button">buy now</button>
                                 </div>
                             </div>`; 
