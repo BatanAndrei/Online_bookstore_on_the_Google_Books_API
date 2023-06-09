@@ -6,7 +6,7 @@ export function initRequest() {
     params.set('key', 'AIzaSyA6rzxK7JdhGxWOanC61q6X0V7Ya71YS8E');
     params.set('printType', 'books');
     params.set('startIndex', 0);
-    params.set('maxResults', 6);
+    params.set('maxResults', 30);
     params.set('langRestrict', 'en');
 
     let resultUrl = params.toString(); 
@@ -77,7 +77,7 @@ export function initRequest() {
             
                                         <h2 class="${item.volumeInfo?.ratingsCount ? "rating-block_count" : "rating-block_count-none"}">${item.volumeInfo?.ratingsCount} review</h2>
                                     </div>
-                                    <h2 class="book-position_info-description">${item.volumeInfo?.description}</h2>
+                                    <h2 class="${item.volumeInfo?.description ? "book-position_info-description" : "book-position_info-description-none"}">${item.volumeInfo?.description}</h2>
                                     <h2 class="${item.saleInfo?.retailPrice?.amount ? "book-position_info-sale" : "book-position_info-sale-none"}">&#36; ${item.saleInfo?.retailPrice?.amount}</h2>
                                     <button class="btn_buy-now" type="button">buy now</button>
                                 </div>

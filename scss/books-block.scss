@@ -209,6 +209,10 @@
                     color: $grey-font;
                 }
 
+                .book-position_info-description-none {
+                    display: none;
+                }
+
                 .book-position_info-sale {
                     @include montserrat-bold;
                     position: absolute;
@@ -245,7 +249,5 @@
     @include button;
 }
 
-.book-position_info-sale-none {
-    display: none;
-}
+
 
