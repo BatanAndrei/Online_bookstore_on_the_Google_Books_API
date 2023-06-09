@@ -28,6 +28,11 @@
     font-style: normal;
 }
 
+@mixin montserrat-bold {
+    font-family: 'Montserrat-B';
+    font-style: bold;
+}
+
 @mixin opensans-normal {
     font-family: 'OpenSans';
     font-style: normal;

@@ -57,6 +57,32 @@
                 width: 212px;
                 height: 320px;
                 border: 1px solid blue;
+
+                .book-position_info-author {
+                    @include opensans-normal;
+                    font-weight: $font-400;
+                    padding: 40px 0px 0px 30px;
+                    font-size: 10px;
+                    line-height: 14px;
+                    text-transform: capitalize;
+                    color: $grey-font;
+                }
+
+                .book-position_info-title {
+                    @include montserrat-bold;
+                    padding: 4px 0px 0px 30px;
+                    font-weight: $font-700;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $bold-font;
+                }
+
+                .rating-block {
+                    margin: 4px 0px 0px 30px;
+                    width: 176px;
+                    height: 15px;
+                    border: $border;
+                }
             }
         }
     }

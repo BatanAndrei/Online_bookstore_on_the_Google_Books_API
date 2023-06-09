@@ -30,7 +30,11 @@ export function initRequest() {
            dataItems.forEach(item => {
               let books = `<div class="book-position">
                                 <img class="book-position_image" src="${item.volumeInfo.imageLinks.thumbnail}">
-                                <div class="book-position_info"></div>
+                                <div class="book-position_info">
+                                    <h2 class="book-position_info-author">${item.volumeInfo.authors}</h2>
+                                    <h2 class="book-position_info-title">${item.volumeInfo.title}</h2>
+                                    <div class="rating-block"></div>
+                                </div>
                             </div>`; 
                    
                                 console.log(item)

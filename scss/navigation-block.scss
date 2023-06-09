@@ -3,6 +3,7 @@
 @import 'fonts';
 
 * {
+    margin: 0px;
     box-sizing: border-box;
 }
 
@@ -37,8 +38,7 @@
             padding: 0px;
 
             .nav-links_item-books {
-                font-family: 'Montserrat-B';
-                font-style: normal;
+                @include montserrat-bold;
                 font-weight: $font-900;
                 @include nav-links-text;
                 
