@@ -112,6 +112,29 @@
                         line-height: 14px;
                         color: $grey-font;
                         border: $border;
+
+                        .rating-block_stars-one {
+                            display: flex;
+                            width: 65px;
+                            height: 15px;
+
+                            .rating-block_stars-yellow {
+                                width: 12PX;
+                                height: 12PX;
+                                background-image: url(../svg/Star\ yellow.svg);
+                            }
+
+                            .rating-block_stars-grey {
+                                width: 12PX;
+                                height: 12PX;
+                                background-image: url(../svg/Star\ grey.svg);
+                            }
+                            
+                        }
+
+                        .rating-block_stars-one-none {
+                            display: none;
+                        }
                     }
 
                     .rating-block-stars-none {

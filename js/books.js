@@ -34,7 +34,31 @@ export function initRequest() {
                                     <h2 class="book-position_info-author">${item.volumeInfo?.authors}</h2>
                                     <h2 class="book-position_info-title">${item.volumeInfo?.title}</h2>
                                     <div class="${item.volumeInfo?.averageRating ? "rating-block" : "rating-block-none"}">
-                                        <div class="${item.volumeInfo?.averageRating ? "rating-block_stars" : "rating-block-stars-none"}">${item.volumeInfo?.averageRating}</div>
+
+
+                                        <div class="${item.volumeInfo?.averageRating ? "rating-block_stars" : "rating-block-stars-none"}">
+                                            <div class="${item.volumeInfo?.averageRating === 1 ? "rating-block_stars-one" : "rating-block_stars-one-none"}">
+                                                <div class="rating-block_stars-yellow"></div>
+                                                <div class="rating-block_stars-grey"></div>
+                                                <div class="rating-block_stars-grey"></div>
+                                                <div class="rating-block_stars-grey"></div>
+                                                <div class="rating-block_stars-grey"></div>
+                                            </div>
+                                            <div class="rating-block_stars-two">
+                                            
+                                            </div>
+                                            <div class="rating-block_stars-three">
+                                            
+                                            </div>
+                                            <div class="rating-block_stars-four">
+                                            
+                                            </div>
+                                            <div class="rating-block_stars-five">
+                                            
+                                            </div>
+                                        </div>
+
+            
                                         <h2 class="${item.volumeInfo?.ratingsCount ? "rating-block_count" : "rating-block_count-none"}">${item.volumeInfo?.ratingsCount} review</h2>
                                     </div>
                                     <h2 class="book-position_info-description">${item.volumeInfo?.description}</h2>
