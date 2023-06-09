@@ -6,7 +6,7 @@ export function initRequest() {
     params.set('key', 'AIzaSyA6rzxK7JdhGxWOanC61q6X0V7Ya71YS8E');
     params.set('printType', 'books');
     params.set('startIndex', 0);
-    params.set('maxResults', 5);
+    params.set('maxResults', 2);
     params.set('langRestrict', 'ru');
 
     let resultUrl = params.toString(); 
@@ -28,8 +28,8 @@ export function initRequest() {
           let dataItems = data.items;
           
            dataItems.forEach(item => {
-              let books = `<div class="books">
-                                  <img class="books_position" src="${item.volumeInfo.imageLinks.thumbnail}">    
+              let books = `<div class="book-position">
+                                  <img class="book" src="${item.volumeInfo.imageLinks.thumbnail}">    
                                 </div>`; 
                    
                                 console.log(item)
