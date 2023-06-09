@@ -5,7 +5,7 @@
     top: -80px;
     display: flex;
     width: $width-content;
-    height: 1146px;
+    max-height: 5146px;
     
     .category-books {
         width: 416px;
@@ -36,7 +36,7 @@
         position: relative;
         left: -60px;
         width: 1024px;
-        height: 1146px;
+        max-height: 5146px;
         border: $border;
 
         .book-position {
@@ -49,7 +49,7 @@
                 margin-top: 40px;
                 width: 212px;
                 height: 320px;
-                border: 1px solid green;
+                box-shadow: 5px 15px 5px rgba(0,0,0,.3);
             }
 
             .book-position_info {
