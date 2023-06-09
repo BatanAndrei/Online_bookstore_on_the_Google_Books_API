@@ -6,7 +6,7 @@ export function initRequest() {
     params.set('key', 'AIzaSyA6rzxK7JdhGxWOanC61q6X0V7Ya71YS8E');
     params.set('printType', 'books');
     params.set('startIndex', 0);
-    params.set('maxResults', 30);
+    params.set('maxResults', 6);
     params.set('langRestrict', 'en');
 
     let resultUrl = params.toString(); 
@@ -39,6 +39,7 @@ export function initRequest() {
                                     </div>
                                     <h2 class="book-position_info-description">${item.volumeInfo?.description}</h2>
                                     <h2 class="book-position_info-sale">${item.saleInfo?.retailPrice?.amount}</h2>
+                                    <button class="btn_buy-now">buy now</button>
                                 </div>
                             </div>`; 
                    

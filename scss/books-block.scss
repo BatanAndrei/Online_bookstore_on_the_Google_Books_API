@@ -126,21 +126,25 @@
                     @include montserrat-bold;
                     width: 70px;
                     height: 18px;
-                    margin: 16px 0px 0px 30px;;
+                    margin: 16px 0px 0px 30px;
                     font-weight: $font-700;
                     font-size: 13px;
                     line-height: 16px;
                     text-transform: uppercase;
                     color: $bold-font;
                     border: $border;
+                }
 
+                .btn_buy-now {
+                    @include button;
+                    margin: 16px 0px 0px 30px;
                 }
             }
         }
     }
 }
 
-.btn {
+.btn_load-more {
     position: relative;
     top: -40px;
     left: 741px;
