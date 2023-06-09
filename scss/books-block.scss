@@ -78,10 +78,27 @@
                 }
 
                 .rating-block {
+                    display: flex;
+                    align-items: center;
                     margin: 4px 0px 0px 30px;
                     width: 176px;
                     height: 15px;
                     border: $border;
+                }
+
+                .book-position_info-description {
+                    @include opensans-normal;
+                    width: 176px;
+                    height: 42px;
+                    margin: 17px 0px 0px 30px;
+                    font-weight: $font-400;
+                    font-size: 10px;
+                    line-height: 14px;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    border: $border;
+                    color: $grey-font;
                 }
             }
         }

@@ -6,7 +6,7 @@ export function initRequest() {
     params.set('key', 'AIzaSyA6rzxK7JdhGxWOanC61q6X0V7Ya71YS8E');
     params.set('printType', 'books');
     params.set('startIndex', 0);
-    params.set('maxResults', 2);
+    params.set('maxResults', 6);
     params.set('langRestrict', 'ru');
 
     let resultUrl = params.toString(); 
@@ -29,11 +29,12 @@ export function initRequest() {
           
            dataItems.forEach(item => {
               let books = `<div class="book-position">
-                                <img class="book-position_image" src="${item.volumeInfo.imageLinks.thumbnail}">
+                                <img class="book-position_image" src="${item.volumeInfo?.imageLinks?.thumbnail}">
                                 <div class="book-position_info">
-                                    <h2 class="book-position_info-author">${item.volumeInfo.authors}</h2>
-                                    <h2 class="book-position_info-title">${item.volumeInfo.title}</h2>
+                                    <h2 class="book-position_info-author">${item.volumeInfo?.authors}</h2>
+                                    <h2 class="book-position_info-title">${item.volumeInfo?.title}</h2>
                                     <div class="rating-block"></div>
+                                    <h2 class="book-position_info-description">${item.volumeInfo?.description}</h2>
                                 </div>
                             </div>`; 
                    
