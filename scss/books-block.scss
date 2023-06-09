@@ -91,6 +91,10 @@
                     color: $bold-font;
                 }
 
+                .rating-block-none {
+                    display: none;
+                }
+
                 .rating-block {
                     display: flex;
                     align-items: center;
@@ -98,7 +102,7 @@
                     width: 176px;
                     height: 15px;
                     border: $border;
-
+                    
                     .rating-block_stars {
                         width: 65px;
                         height: 15px;
@@ -107,6 +111,10 @@
                         line-height: 14px;
                         color: $grey-font;
                         border: $border;
+                    }
+
+                    .rating-block-stars-none {
+                        display: none;
                     }
 
                     .rating-block_count {
@@ -119,6 +127,10 @@
                         line-height: 14px;
                         color: $grey-font;
                         border: $border;
+                    }
+
+                    .rating-block_count-none {
+                        display: none;
                     }
                 }
 
