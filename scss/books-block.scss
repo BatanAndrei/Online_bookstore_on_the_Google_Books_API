@@ -40,14 +40,23 @@
         border: $border;
 
         .book-position {
+            display: flex;
             width: 450px;
             height: 368px;
-            border: $border;
+            border: 1px solid red;
 
-            .book {
+            .book-position_image {
                 margin-top: 40px;
                 width: 212px;
                 height: 320px;
+                border: 1px solid green;
+            }
+
+            .book-position_info {
+                margin-top: 40px;
+                width: 212px;
+                height: 320px;
+                border: 1px solid blue;
             }
         }
     }

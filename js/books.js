@@ -29,8 +29,9 @@ export function initRequest() {
           
            dataItems.forEach(item => {
               let books = `<div class="book-position">
-                                  <img class="book" src="${item.volumeInfo.imageLinks.thumbnail}">    
-                                </div>`; 
+                                <img class="book-position_image" src="${item.volumeInfo.imageLinks.thumbnail}">
+                                <div class="book-position_info"></div>
+                            </div>`; 
                    
                                 console.log(item)
               showCaseBooks.innerHTML += books;    
