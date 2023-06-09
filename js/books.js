@@ -11,7 +11,7 @@ export function initRequest() {
 
     let resultUrl = params.toString(); 
 
-      const options = {
+        const options = {
             method: 'GET',
             mode: 'cors'
         };
@@ -19,13 +19,13 @@ export function initRequest() {
         fetch(`https://www.googleapis.com/books/v1/volumes?${resultUrl}`, options)
         .then((response) => {
        
-          const result = response.json();  //запись нового promisa
+            const result = response.json();  //запись нового promisa
           
-          return result;
+            return result;
         })
         .then((data) => {
           
-          const dataItems = data.items;
+        const dataItems = data.items;
           
            dataItems.forEach(item => {
               let books = `<div class="book-position">
@@ -43,8 +43,8 @@ export function initRequest() {
                                 </div>
                             </div>`; 
                    
-                                console.log(item)
-              showCaseBooks.innerHTML += books;    
+            console.log(item)
+            showCaseBooks.innerHTML += books;    
         });  
         
           //console.log(resu);
