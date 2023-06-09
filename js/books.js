@@ -7,7 +7,7 @@ export function initRequest() {
     params.set('printType', 'books');
     params.set('startIndex', 0);
     params.set('maxResults', 30);
-    params.set('langRestrict', 'en');
+    params.set('langRestrict', 'ru');
 
     let resultUrl = params.toString(); 
 
