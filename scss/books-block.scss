@@ -96,10 +96,10 @@
                     }
 
                     .rating-block_count {
+                        @include opensans-normal;
                         margin-left: 6px;
                         width: 100px;
                         height: 15px;
-                        @include opensans-normal;
                         font-weight: 400;
                         font-size: 10px;
                         line-height: 14px;
@@ -120,6 +120,20 @@
                     text-overflow: ellipsis;
                     border: $border;
                     color: $grey-font;
+                }
+
+                .book-position_info-sale {
+                    @include montserrat-bold;
+                    width: 70px;
+                    height: 18px;
+                    margin: 16px 0px 0px 30px;;
+                    font-weight: $font-700;
+                    font-size: 13px;
+                    line-height: 16px;
+                    text-transform: uppercase;
+                    color: $bold-font;
+                    border: $border;
+
                 }
             }
         }
