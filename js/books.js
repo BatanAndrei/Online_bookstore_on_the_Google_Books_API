@@ -44,17 +44,33 @@ export function initRequest() {
                                                 <div class="rating-block_stars-grey"></div>
                                                 <div class="rating-block_stars-grey"></div>
                                             </div>
-                                            <div class="rating-block_stars-two">
-                                            
+                                            <div class="${item.volumeInfo?.averageRating === 2 ? "rating-block_stars-two" : "rating-block_stars-two-none"}">
+                                                <div class="rating-block_stars-yellow"></div>
+                                                <div class="rating-block_stars-yellow"></div>
+                                                <div class="rating-block_stars-grey"></div>
+                                                <div class="rating-block_stars-grey"></div>
+                                                <div class="rating-block_stars-grey"></div>
                                             </div>
-                                            <div class="rating-block_stars-three">
-                                            
+                                            <div class="${item.volumeInfo?.averageRating === 3 ? "rating-block_stars-three" : "rating-block_stars-three-none"}">
+                                                <div class="rating-block_stars-yellow"></div>
+                                                <div class="rating-block_stars-yellow"></div>
+                                                <div class="rating-block_stars-yellow"></div>
+                                                <div class="rating-block_stars-grey"></div>
+                                                <div class="rating-block_stars-grey"></div>
                                             </div>
-                                            <div class="rating-block_stars-four">
-                                            
+                                            <div class="${item.volumeInfo?.averageRating === 4 ? "rating-block_stars-four" : "rating-block_stars-four-none"}">
+                                                <div class="rating-block_stars-yellow"></div>
+                                                <div class="rating-block_stars-yellow"></div>
+                                                <div class="rating-block_stars-yellow"></div>
+                                                <div class="rating-block_stars-yellow"></div>
+                                                <div class="rating-block_stars-grey"></div>
                                             </div>
-                                            <div class="rating-block_stars-five">
-                                            
+                                            <div class="${item.volumeInfo?.averageRating === 5 ? "rating-block_stars-five" : "rating-block_stars-five-none"}">
+                                                <div class="rating-block_stars-yellow"></div>
+                                                <div class="rating-block_stars-yellow"></div>
+                                                <div class="rating-block_stars-yellow"></div>
+                                                <div class="rating-block_stars-yellow"></div>
+                                                <div class="rating-block_stars-yellow"></div>
                                             </div>
                                         </div>
 
