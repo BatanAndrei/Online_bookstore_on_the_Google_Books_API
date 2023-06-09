@@ -47,3 +47,20 @@
     text-transform: uppercase;
     cursor: pointer;
 }
+
+@mixin stars-yellow {
+    width: 12PX;
+    height: 12PX;
+    background-image: url(../svg/Star\ yellow.svg);
+}
+
+@mixin stars-grey {
+    width: 12PX;
+    height: 12PX;
+    background-image: url(../svg/Star\ grey.svg);
+}
+
+@mixin rating-block-size {
+    width: 65px;
+    height: 15px;
+}
