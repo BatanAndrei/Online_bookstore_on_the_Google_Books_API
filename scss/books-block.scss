@@ -113,18 +113,18 @@
                         color: $grey-font;
                         border: $border;
 
-                        .rating-block_stars-one {
+                        .rating-block_stars__one {
                             display: flex;
                             width: 65px;
                             height: 15px;
 
-                            .rating-block_stars-yellow {
+                            .rating-block_stars__yellow {
                                 width: 12PX;
                                 height: 12PX;
                                 background-image: url(../svg/Star\ yellow.svg);
                             }
 
-                            .rating-block_stars-grey {
+                            .rating-block_stars__grey {
                                 width: 12PX;
                                 height: 12PX;
                                 background-image: url(../svg/Star\ grey.svg);
@@ -132,18 +132,18 @@
                             
                         }
 
-                        .rating-block_stars-two {
+                        .rating-block_stars__two {
                             display: flex;
                             width: 65px;
                             height: 15px;
 
-                            .rating-block_stars-yellow {
+                            .rating-block_stars__yellow {
                                 width: 12PX;
                                 height: 12PX;
                                 background-image: url(../svg/Star\ yellow.svg);
                             }
 
-                            .rating-block_stars-grey {
+                            .rating-block_stars__grey {
                                 width: 12PX;
                                 height: 12PX;
                                 background-image: url(../svg/Star\ grey.svg);
@@ -151,18 +151,18 @@
                             
                         }
 
-                        .rating-block_stars-three {
+                        .rating-block_stars__three {
                             display: flex;
                             width: 65px;
                             height: 15px;
 
-                            .rating-block_stars-yellow {
+                            .rating-block_stars__yellow {
                                 width: 12PX;
                                 height: 12PX;
                                 background-image: url(../svg/Star\ yellow.svg);
                             }
 
-                            .rating-block_stars-grey {
+                            .rating-block_stars__grey {
                                 width: 12PX;
                                 height: 12PX;
                                 background-image: url(../svg/Star\ grey.svg);
@@ -170,18 +170,18 @@
                             
                         }
 
-                        .rating-block_stars-four {
+                        .rating-block_stars__four {
                             display: flex;
                             width: 65px;
                             height: 15px;
 
-                            .rating-block_stars-yellow {
+                            .rating-block_stars__yellow {
                                 width: 12PX;
                                 height: 12PX;
                                 background-image: url(../svg/Star\ yellow.svg);
                             }
 
-                            .rating-block_stars-grey {
+                            .rating-block_stars__grey {
                                 width: 12PX;
                                 height: 12PX;
                                 background-image: url(../svg/Star\ grey.svg);
@@ -189,18 +189,18 @@
                             
                         }
 
-                        .rating-block_stars-five {
+                        .rating-block_stars__five {
                             display: flex;
                             width: 65px;
                             height: 15px;
 
-                            .rating-block_stars-yellow {
+                            .rating-block_stars__yellow {
                                 width: 12PX;
                                 height: 12PX;
                                 background-image: url(../svg/Star\ yellow.svg);
                             }
 
-                            .rating-block_stars-grey {
+                            .rating-block_stars__grey {
                                 width: 12PX;
                                 height: 12PX;
                                 background-image: url(../svg/Star\ grey.svg);
@@ -208,9 +208,6 @@
                             
                         }
 
-                        .rating-block_stars-one-none {
-                            display: none;
-                        }
                     }
 
                     .rating-block-stars-none {
