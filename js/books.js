@@ -38,7 +38,7 @@ export function initRequest() {
                                         <h2 class="rating-block_count">${item.volumeInfo?.ratingsCount} review</h2>
                                     </div>
                                     <h2 class="book-position_info-description">${item.volumeInfo?.description}</h2>
-                                    <h2 class="book-position_info-sale">${item.saleInfo?.retailPrice?.amount}</h2?
+                                    <h2 class="book-position_info-sale">${item.saleInfo?.retailPrice?.amount}</h2>
                                 </div>
                             </div>`; 
                    
