@@ -52,6 +52,16 @@
                 box-shadow: 5px 15px 5px rgba(0,0,0,.3);
             }
 
+            .book-position_image-none {
+                margin-top: 40px;
+                width: 212px;
+                height: 310px;
+                font-size: 0;
+                background-size: cover;
+                box-shadow: 5px 15px 5px rgba(0,0,0,.3);
+                background-image: url(../images/images\ placeholder.jpeg) ;
+            }
+
             .book-position_info {
                 margin-top: 40px;
                 width: 212px;
@@ -139,6 +149,10 @@
                     border: $border;
                 }
 
+                .book-position_info-sale-none {
+                    display: none;
+                }
+
                 .btn_buy-now {
                     @include button;
                     margin: 16px 0px 0px 30px;
@@ -153,5 +167,9 @@
     top: -40px;
     left: 741px;
     @include button;
+}
+
+.book-position_info-sale-none {
+    display: none;
 }
 
