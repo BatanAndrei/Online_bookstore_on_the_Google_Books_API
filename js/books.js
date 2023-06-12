@@ -34,8 +34,8 @@ export async function resultRequest() {
 };
 
 
- function drawBooks(books) {
-    books.forEach(item => {
+ function drawBooks(booksItems) {
+    booksItems.forEach(item => {
         let books = `<div class="book-position">
                           <img class="${item.volumeInfo?.imageLinks?.thumbnail ? "book-position_image" : "book-position_image-none"}" src="${item.volumeInfo?.imageLinks?.thumbnail}" alt="foto book">
                           <div class="book-position_info">
@@ -89,6 +89,7 @@ export async function resultRequest() {
       console.log(item)
       showCaseBooks.innerHTML += books;
     });
+    return booksItems;
  }
 
  
