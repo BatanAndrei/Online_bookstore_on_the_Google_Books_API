@@ -1,18 +1,19 @@
 
     const showCaseBooks = document.querySelector('.showecase-books');
+    const btnLoadMore = document.querySelector('.btn_load-more');
 
-    const param = {
-        'url': 'https://www.googleapis.com/books/v1/' ,
-        'q': 'subject:Architecture',
-        'key': 'AIzaSyA6rzxK7JdhGxWOanC61q6X0V7Ya71YS8E',
-        'printType': 'books',
-        'startIndex': 0,
-        'maxResults': 6,
-        'langRestrict': 'en'
-    }
+        let param = {
+            'q': 'subject:Architecture',
+            'startIndex': 0,
+            'maxResults': 6
+        }
     
+        btnLoadMore.addEventListener('click', () => {
+        
+        })
+
     function initRequest() {
-        return fetch(`${param.url}volumes?q=${param.q}&key=${param.key}&printType=${param.printType}&startIndex=${param.startIndex}&maxResults=${param.maxResults}&langRestrict=${param.langRestrict}`)
+        return fetch(`https://www.googleapis.com/books/v1/volumes?q=${param.q}&key=AIzaSyA6rzxK7JdhGxWOanC61q6X0V7Ya71YS8E&printType=books&startIndex=${param.startIndex}&maxResults=${param.maxResults}&langRestrict='en'`)
         .then((response) => {
        
             const result = response.json();  //запись нового promisa
@@ -92,4 +93,3 @@ export async function resultRequest() {
     return booksItems;
  }
 
- 
