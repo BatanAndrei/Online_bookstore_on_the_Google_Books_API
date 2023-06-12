@@ -1,14 +1,35 @@
 
     const showCaseBooks = document.querySelector('.showecase-books');
     const btnLoadMore = document.querySelector('.btn_load-more');
+    const linkCategoryBooks = document.querySelectorAll('.category-books_item');
 
     let querySubject = 'subject:Architecture';
     let startIndex = 0
 
+    export function nextLoadBooks() {
         btnLoadMore.addEventListener('click', () => {
             startIndex += 6;
             resultRequest(); 
-        })
+        });
+    };
+
+    export function nextCategoryBooks() {
+        linkCategoryBooks.forEach((item) => {
+            item.addEventListener('click', event => {
+                let targetCategory = event.target.closest('.category-books_item');
+                removeActiveCategory();
+                targetCategory.classList.add('active');
+            });
+        });
+    };
+
+    function removeActiveCategory() {
+        linkCategoryBooks.forEach(item => {
+            if(item.classList.contains('active')){
+                item.classList.remove('active');
+            }
+        });
+    };
 
     function initRequest() {
         return fetch(`https://www.googleapis.com/books/v1/volumes?q=${querySubject}&key=AIzaSyA6rzxK7JdhGxWOanC61q6X0V7Ya71YS8E&printType=books&startIndex=${startIndex}&maxResults=6&langRestrict='en'`)
