@@ -14,7 +14,7 @@
     };
 
     export function nextCategoryBooks() {
-        linkCategoryBooks.forEach((item) => {
+        linkCategoryBooks.forEach((item, index) => {
             item.addEventListener('click', event => {
                 let targetCategory = event.target.closest('.category-books_item');
                 removeActiveCategory();
