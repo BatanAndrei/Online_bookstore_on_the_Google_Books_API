@@ -27,6 +27,15 @@
                 line-height: 15px;
                 color: $grey-font;
             }
+
+            .category-books_item {
+
+                &.active {
+                    @include montserrat-bold;
+                    font-weight: $font-700;
+                    color: $bold-font;
+                }
+            }
         }
     }
 

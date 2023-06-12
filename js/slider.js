@@ -57,7 +57,6 @@ function moveSlider(num) {                                          //добав
 
 document.addEventListener("DOMContentLoaded", function() {
     initSlider();
-    //initRequest();
     resultRequest();
   });
 
