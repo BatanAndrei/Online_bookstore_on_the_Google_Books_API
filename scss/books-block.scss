@@ -245,6 +245,13 @@
                     bottom: 30px;
                     margin: 16px 0px 0px 25px;
                 }
+
+                .btn_in_the_cart {
+                    @include button-in-the-cart;
+                    position: absolute;
+                    bottom: 30px;
+                    margin: 16px 0px 0px 25px;
+                }
             }
         }
     }

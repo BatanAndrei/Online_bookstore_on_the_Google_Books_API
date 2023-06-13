@@ -10,10 +10,17 @@
 
     function buttonBuy() {
         let btnBuyNow = document.querySelectorAll('.btn_buy-now');
-        btnBuyNow.forEach(item => {
+        btnBuyNow.forEach((item, index) => {
             item.addEventListener('click', event => {
                 let cart = event.target.closest('.btn_buy-now');
+                    cart.classList.toggle('btn_in_the_cart') 
                 console.log(cart)
+                console.log(index)
+                    if(cart.classList.contains('btn_in_the_cart')) {
+                        cart.innerText = 'In the cart';
+                    }else{
+                        cart.innerText = 'buy now';
+                    }
             })
         })
     }

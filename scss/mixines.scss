@@ -43,7 +43,17 @@
     width: 176px;
     height: 45px;
     border: 1px solid #4C3DB2;
-    color: #4C3DB2;
+    color:  #4C3DB2;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+@mixin button-in-the-cart {
+    background-color: whitesmoke;
+    width: 176px;
+    height: 45px;
+    border: 1px solid  #5C6A79;
+    color:  #5C6A79;
     text-transform: uppercase;
     cursor: pointer;
 }
