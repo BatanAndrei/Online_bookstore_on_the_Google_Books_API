@@ -8,7 +8,7 @@
     let startIndex = 0;
     let nextLoadCat = '';
 
-    function buttonBuy() {
+    function buttonBuy() {             // меняем состояние кнопки и перпеключаем класс
         let btnBuyNow = document.querySelectorAll('.btn_buy-now');
         btnBuyNow.forEach((item, index) => {
             item.addEventListener('click', event => {
