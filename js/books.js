@@ -4,8 +4,8 @@
     const linkCategoryBooks = document.querySelectorAll('.category-books_item');
     
     let querySubject = 'subject:Architecture';
-    let startIndex = 0
-    let nextLoadCat = ''
+    let startIndex = 0;
+    let nextLoadCat = '';
     
     export function nextLoadBooks() {                 // по клику отображаем следующие 6 книг
         btnLoadMore.addEventListener('click', () => {
@@ -15,18 +15,28 @@
                     nextLoadCat = item.innerText;          // находим активную категорию
                 }
             })
-            querySubject = `subject:${nextLoadCat}` // отображаем след. 6 книг нужной категории                 
-            resultRequest();                      // снова отображаем запрос уже с книгами load more
+            querySubject = `subject:${nextLoadCat}`; // отображаем нужную категорию                 
+            resultRequest();                      // снова отображаем запрос
+            //console.log(querySubject);
         });
     };
 
     export function toggleCategoryBooks() {              // переключам категории в блоке категорий
-        linkCategoryBooks.forEach((item, index) => {
+        linkCategoryBooks.forEach(item => {
             item.addEventListener('click', event => {
                 let targetCategory = event.target.closest('.category-books_item');
                 removeActiveCategory();                 // убираем класс active
                 targetCategory.classList.add('active'); // добавляем класс active
+
+                if(item.classList.contains('active')) {
+                    nextLoadCat = item.innerText;       // находим активную категорию
+                }
+                showCaseBooks.innerHTML = '';
+                querySubject = `subject:${nextLoadCat}`; // отображаем нужную категорию 
+                resultRequest();                        //снова отображаем запрос
+                console.log(querySubject);
             });
+           
         });
     };
 
