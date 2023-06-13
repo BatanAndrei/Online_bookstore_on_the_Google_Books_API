@@ -7,32 +7,30 @@
     let startIndex = 0
     let nextLoadCat = ''
     
-    export function nextLoadBooks() {
+    export function nextLoadBooks() {                 // по клику отображаем следующие 6 книг
         btnLoadMore.addEventListener('click', () => {
-            startIndex += 6;
+            startIndex += 6;                           // меняем значение начального индекса (книги следующие отображаются с индекса номер 6)
             linkCategoryBooks.forEach(item => {
-                if(item.classList.contains('active')) {
-                    nextLoadCat = item.innerText;
+                if(item.classList.contains('active')) {    
+                    nextLoadCat = item.innerText;          // находим активную категорию
                 }
             })
-            querySubject = `subject:${nextLoadCat}`
-            console.log(nextLoadCat)
-            resultRequest();
+            querySubject = `subject:${nextLoadCat}` // отображаем след. 6 книг нужной категории                 
+            resultRequest();                      // снова отображаем запрос уже с книгами load more
         });
     };
 
-    export function toggleCategoryBooks() {
+    export function toggleCategoryBooks() {              // переключам категории в блоке категорий
         linkCategoryBooks.forEach((item, index) => {
             item.addEventListener('click', event => {
                 let targetCategory = event.target.closest('.category-books_item');
-                removeActiveCategory();
-                targetCategory.classList.add('active');
+                removeActiveCategory();                 // убираем класс active
+                targetCategory.classList.add('active'); // добавляем класс active
             });
         });
     };
 
-
-    function removeActiveCategory() {
+    function removeActiveCategory() {  //убираем класс active
         linkCategoryBooks.forEach(item => {
             if(item.classList.contains('active')){
                 item.classList.remove('active');
@@ -40,8 +38,7 @@
         });
     };
 
-
-    function initRequest() {
+    function initRequest() {      //инициализируем запрос (возвращаем fetch в initRequest())
         return fetch(`https://www.googleapis.com/books/v1/volumes?q=${querySubject}&key=AIzaSyA6rzxK7JdhGxWOanC61q6X0V7Ya71YS8E&printType=books&startIndex=${startIndex}&maxResults=6&langRestrict='en'`)
         .then((response) => {
        
@@ -57,15 +54,13 @@
         .catch(() => { console.log('error') });
 }
 
-
-export async function resultRequest() {
-    const data = await initRequest();
+export async function resultRequest() {     
+    const data = await initRequest();    // обрабатываем асинхронно запрос и записываем данные в const data
     const dataItems = data.items;
-    drawBooks(dataItems);
+    drawBooks(dataItems);             // отображаем запрос
 };
 
-
- function drawBooks(booksItems) {
+ function drawBooks(booksItems) {    // рисуем запрос (книги)
     booksItems.forEach(item => {
         let books = `<div class="book-position">
                           <img class="${item.volumeInfo?.imageLinks?.thumbnail ? "book-position_image" : "book-position_image-none"}" src="${item.volumeInfo?.imageLinks?.thumbnail}" alt="foto book">
@@ -73,7 +68,7 @@ export async function resultRequest() {
                               <h2 class="book-position_info-author">${item.volumeInfo?.authors}</h2>
                               <h2 class="book-position_info-title">${item.volumeInfo?.title}</h2>
                               <div class="${item.volumeInfo?.averageRating ? "rating-block" : "rating-block-none"}">
-                                  <div class="${item.volumeInfo?.averageRating ? "rating-block_stars" : ""}">
+                                  <div class="${item.volumeInfo?.averageRating ? "rating-block_stars" : ""}">   
                                       <div class="${item.volumeInfo?.averageRating === 1 ? "rating-block_stars__one" : ""}">
                                           <div class="rating-block_stars__yellow"></div>
                                           <div class="rating-block_stars__grey"></div>
