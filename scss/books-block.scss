@@ -46,13 +46,11 @@
         left: -60px;
         width: 1024px;
         max-height: 10146px;
-        border: $border;
 
         .book-position {
             display: flex;
             width: 450px;
             height: 368px;
-            border: 1px solid red;
 
             .book-position_image {
                 margin-top: 40px;
@@ -76,7 +74,6 @@
                 margin-top: 40px;
                 width: 212px;
                 height: 310px;
-                border: 1px solid blue;
 
                 .book-position_info-author {
                     @include opensans-normal;
