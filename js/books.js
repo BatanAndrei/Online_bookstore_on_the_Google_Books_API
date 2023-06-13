@@ -2,11 +2,22 @@
     const showCaseBooks = document.querySelector('.showecase-books');
     const btnLoadMore = document.querySelector('.btn_load-more');
     const linkCategoryBooks = document.querySelectorAll('.category-books_item');
+    let textBtnBy = 'buy now';
     
     let querySubject = 'subject:Architecture';
     let startIndex = 0;
     let nextLoadCat = '';
-    
+
+    function buttonBuy() {
+        let btnBuyNow = document.querySelectorAll('.btn_buy-now');
+        btnBuyNow.forEach(item => {
+            item.addEventListener('click', event => {
+                let cart = event.target.closest('.btn_buy-now');
+                console.log(cart)
+            })
+        })
+    }
+
     export function nextLoadBooks() {                 // по клику отображаем следующие 6 книг
         btnLoadMore.addEventListener('click', () => {
             startIndex += 6;                           // меняем значение начального индекса (книги следующие отображаются с индекса номер 6)
@@ -67,6 +78,7 @@ export async function resultRequest() {
     const data = await initRequest();    // обрабатываем асинхронно запрос и записываем данные в const data
     const dataItems = data.items;
     drawBooks(dataItems);             // отображаем запрос
+    buttonBuy();
 };
 
  function drawBooks(booksItems) {    // рисуем запрос (книги)
@@ -118,7 +130,7 @@ export async function resultRequest() {
                               </div>
                               <h2 class="${item.volumeInfo?.description ? "book-position_info-description" : "book-position_info-description-none"}">${item.volumeInfo?.description}</h2>
                               <h2 class="${item.saleInfo?.retailPrice?.amount ? "book-position_info-sale" : "book-position_info-sale-none"}">&#36; ${item.saleInfo?.retailPrice?.amount}</h2>
-                              <button class="btn_buy-now" type="button">buy now</button>
+                              <button class="btn_buy-now" type="button">${textBtnBy}</button>
                           </div>
                       </div>`; 
       //console.log(item.volumeInfo.categories[0])  // в API не правильно отображаются категории (не работает q=subject:Category)
