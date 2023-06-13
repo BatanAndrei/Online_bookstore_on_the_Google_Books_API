@@ -17,7 +17,7 @@
             })
             querySubject = `subject:${nextLoadCat}`; // отображаем нужную категорию                 
             resultRequest();                      // снова отображаем запрос
-            //console.log(querySubject);
+            console.log(querySubject);
         });
     };
 
@@ -36,7 +36,6 @@
                 resultRequest();                        //снова отображаем запрос
                 console.log(querySubject);
             });
-           
         });
     };
 
