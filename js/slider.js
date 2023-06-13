@@ -1,4 +1,4 @@
-import {resultRequest, nextLoadBooks, nextCategoryBooks} from './books';
+import {resultRequest, nextLoadBooks, toggleCategoryBooks} from './books';
 
 export let images = [{
     url: './banner 1.png',
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
     initSlider();
     resultRequest();
     nextLoadBooks();
-    nextCategoryBooks();
+    toggleCategoryBooks();
   });
 
 

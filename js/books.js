@@ -2,18 +2,26 @@
     const showCaseBooks = document.querySelector('.showecase-books');
     const btnLoadMore = document.querySelector('.btn_load-more');
     const linkCategoryBooks = document.querySelectorAll('.category-books_item');
-
+    
     let querySubject = 'subject:Architecture';
     let startIndex = 0
-
+    let nextLoadCat = ''
+    
     export function nextLoadBooks() {
         btnLoadMore.addEventListener('click', () => {
             startIndex += 6;
-            resultRequest(); 
+            linkCategoryBooks.forEach(item => {
+                if(item.classList.contains('active')) {
+                    nextLoadCat = item.innerText;
+                }
+            })
+            querySubject = `subject:${nextLoadCat}`
+            console.log(nextLoadCat)
+            resultRequest();
         });
     };
 
-    export function nextCategoryBooks() {
+    export function toggleCategoryBooks() {
         linkCategoryBooks.forEach((item, index) => {
             item.addEventListener('click', event => {
                 let targetCategory = event.target.closest('.category-books_item');
@@ -23,6 +31,7 @@
         });
     };
 
+
     function removeActiveCategory() {
         linkCategoryBooks.forEach(item => {
             if(item.classList.contains('active')){
@@ -30,6 +39,7 @@
             }
         });
     };
+
 
     function initRequest() {
         return fetch(`https://www.googleapis.com/books/v1/volumes?q=${querySubject}&key=AIzaSyA6rzxK7JdhGxWOanC61q6X0V7Ya71YS8E&printType=books&startIndex=${startIndex}&maxResults=6&langRestrict='en'`)
@@ -46,6 +56,7 @@
         })
         .catch(() => { console.log('error') });
 }
+
 
 export async function resultRequest() {
     const data = await initRequest();
@@ -106,7 +117,7 @@ export async function resultRequest() {
                               <button class="btn_buy-now" type="button">buy now</button>
                           </div>
                       </div>`; 
-      console.log(item)
+      //console.log(item.volumeInfo.categories[0])  // в API не правильно отображаются категории (не работает q=subject:Category)
       showCaseBooks.innerHTML += books;
     });
     return booksItems;
