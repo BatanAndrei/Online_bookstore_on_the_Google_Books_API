@@ -15,13 +15,14 @@
             item.addEventListener('click', event => {
                 let buttonBuy = event.target.closest('.btn_buy-now');
                 buttonBuy.classList.toggle('btn_in_the_cart') 
-                console.log(buttonBuy)
-                console.log(index)
+                //console.log(buttonBuy)
+                //console.log(index)
                     if(buttonBuy.classList.contains('btn_in_the_cart')) {
                         buttonBuy.innerText = 'In the cart';
                     }else{
                         buttonBuy.innerText = 'buy now';
                     }
+                    console.log(event.target.dataset.btnbuy)
             })
         })
     }
@@ -36,7 +37,7 @@
             })
             querySubject = `subject:${nextLoadCat}`; // отображаем нужную категорию                 
             resultRequest();                      // снова отображаем запрос
-            console.log(querySubject);
+            //console.log(querySubject);
         });
     };
 
@@ -53,7 +54,7 @@
                 showCaseBooks.innerHTML = '';
                 querySubject = `subject:${nextLoadCat}`; // отображаем нужную категорию 
                 resultRequest();                        //снова отображаем запрос
-                console.log(querySubject);
+                //console.log(querySubject);
                 cart = [];                             //мвссив становиться пустым для новой каткгории
              });
         });
@@ -141,7 +142,7 @@ export async function resultRequest() {
                               </div>
                               <h2 class="${item.volumeInfo?.description ? "book-position_info-description" : "book-position_info-description-none"}">${item.volumeInfo?.description}</h2>
                               <h2 class="${item.saleInfo?.retailPrice?.amount ? "book-position_info-sale" : "book-position_info-sale-none"}">&#36; ${item.saleInfo?.retailPrice?.amount}</h2>
-                              <button class="btn_buy-now" type="button">${textBtnBy}</button>
+                              <button class="btn_buy-now" type="button" data-btnbuy="${item.id}">${textBtnBy}</button>
                           </div>
                       </div>`; 
       //console.log(item.volumeInfo.categories[0])  // в API не правильно отображаются категории (не работает q=subject:Category)
