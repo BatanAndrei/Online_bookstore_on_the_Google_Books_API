@@ -7,6 +7,7 @@
     let querySubject = 'subject:Architecture';
     let startIndex = 0;
     let nextLoadCat = '';
+    let cart = [];
 
     function buttonBuy() {             // меняем состояние кнопки и перпеключаем класс
         let buttonsBuyNow = document.querySelectorAll('.btn_buy-now');
@@ -53,7 +54,8 @@
                 querySubject = `subject:${nextLoadCat}`; // отображаем нужную категорию 
                 resultRequest();                        //снова отображаем запрос
                 console.log(querySubject);
-            });
+                cart = [];                             //мвссив становиться пустым для новой каткгории
+             });
         });
     };
 
@@ -84,8 +86,9 @@
 export async function resultRequest() {     
     const data = await initRequest();    // обрабатываем асинхронно запрос и записываем данные в const data
     const dataItems = data.items;
-    drawBooks(dataItems);  
-    console.log(dataItems)           // отображаем запрос
+    drawBooks(dataItems);
+    cart.push(dataItems)  
+    console.log(cart)           // отображаем запрос
     buttonBuy();
 };
 
