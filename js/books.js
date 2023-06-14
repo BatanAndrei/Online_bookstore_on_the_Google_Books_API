@@ -9,35 +9,39 @@
     let nextLoadCat = '';
     let cart = [];
 
-    function buttonBuy() {             // меняем состояние кнопки и перпеключаем класс
+    function addToCart() {             // меняем состояние кнопки и перпеключаем класс
         let buttonsBuyNow = document.querySelectorAll('.btn_buy-now');
         buttonsBuyNow.forEach((item, index) => {
             item.addEventListener('click', event => {
                 let buttonBuy = event.target.closest('.btn_buy-now');
                 buttonBuy.classList.toggle('btn_in_the_cart') 
-                //console.log(buttonBuy)
-                //console.log(index)
+               
                     if(buttonBuy.classList.contains('btn_in_the_cart')) {
                         buttonBuy.innerText = 'In the cart';
                     }else{
                         buttonBuy.innerText = 'buy now';
                     }
-                    //console.log(event.target.dataset.btnbuy);
-                    //console.log(cart);
-                    if(!event.target.dataset.btnbuy) {
-                        return;
-                    }
-                    let bookInCart = JSON.parse(localStorage.getItem('inCart'));
-                    for( let i = 0; i < cart.length; i++){
-                        let resultFor = cart[i];
-                        resultFor.forEach(item => {
-                            if(item.id == event.target.dataset.btnbuy) {
-                                console.log(item.id)
-                            }
-                        })
-                    }
+
+                    saveBooks(event);
             })
         })
+    }
+
+    function saveBooks(ev) {
+        if(!ev.target.dataset.btnbuy) {
+            return;
+        }
+        let bookInCart = JSON.parse(localStorage.getItem('inCart'));
+        for( let i = 0; i < cart.length; i++){
+            let resultFor = cart[i];
+            resultFor.forEach(item => {
+                let id = item.id;
+                if(id == ev.target.dataset.btnbuy) {
+                    let found = resultFor.find(element => element.id === id) 
+                    console.log(found)
+                }
+            })
+        }
     }
 
     export function nextLoadBooks() {                 // по клику отображаем следующие 6 книг
@@ -101,9 +105,8 @@ export async function resultRequest() {
     const data = await initRequest();    // обрабатываем асинхронно запрос и записываем данные в const data
     const dataItems = data.items;
     drawBooks(dataItems);
-    cart.push(dataItems)  
-    console.log(cart)           // отображаем запрос
-    buttonBuy();
+    cart.push(dataItems)            // отображаем запрос
+    addToCart();
 };
 
  function drawBooks(booksItems) {    // рисуем запрос (книги)
