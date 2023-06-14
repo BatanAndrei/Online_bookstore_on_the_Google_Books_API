@@ -64,9 +64,12 @@
             }
         });
     };
+//AIzaSyDVJxwQNAiELSo-eDJIX6iHZKTzB1NTSfk
+//AIzaSyA6rzxK7JdhGxWOanC61q6X0V7Ya71YS8E
 
+//AIzaSyCkhmDU3eQvwvaFIrZiTxPMmWt3skFYwgk
     function initRequest() {      //инициализируем запрос (возвращаем fetch в initRequest())
-        return fetch(`https://www.googleapis.com/books/v1/volumes?q=${querySubject}&key=AIzaSyA6rzxK7JdhGxWOanC61q6X0V7Ya71YS8E&printType=books&startIndex=${startIndex}&maxResults=6&langRestrict='en'`)
+        return fetch(`https://www.googleapis.com/books/v1/volumes?q=${querySubject}&key=AIzaSyC8YBwRI2UO8lk5k4S31Z77MyGZr_Lu_bI&printType=books&startIndex=${startIndex}&maxResults=6&langRestrict='en'`)
         .then((response) => {
        
             const result = response.json();  //запись нового promisa
