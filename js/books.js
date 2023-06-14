@@ -22,7 +22,20 @@
                     }else{
                         buttonBuy.innerText = 'buy now';
                     }
-                    console.log(event.target.dataset.btnbuy)
+                    //console.log(event.target.dataset.btnbuy);
+                    //console.log(cart);
+                    if(!event.target.dataset.btnbuy) {
+                        return;
+                    }
+                    let bookInCart = JSON.parse(localStorage.getItem('inCart'));
+                    for( let i = 0; i < cart.length; i++){
+                        let resultFor = cart[i];
+                        resultFor.forEach(item => {
+                            if(item.id == event.target.dataset.btnbuy) {
+                                console.log(item.id)
+                            }
+                        })
+                    }
             })
         })
     }
