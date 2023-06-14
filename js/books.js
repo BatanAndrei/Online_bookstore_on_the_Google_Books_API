@@ -9,17 +9,17 @@
     let nextLoadCat = '';
 
     function buttonBuy() {             // меняем состояние кнопки и перпеключаем класс
-        let btnBuyNow = document.querySelectorAll('.btn_buy-now');
-        btnBuyNow.forEach((item, index) => {
+        let buttonsBuyNow = document.querySelectorAll('.btn_buy-now');
+        buttonsBuyNow.forEach((item, index) => {
             item.addEventListener('click', event => {
-                let cart = event.target.closest('.btn_buy-now');
-                    cart.classList.toggle('btn_in_the_cart') 
-                console.log(cart)
+                let buttonBuy = event.target.closest('.btn_buy-now');
+                buttonBuy.classList.toggle('btn_in_the_cart') 
+                console.log(buttonBuy)
                 console.log(index)
-                    if(cart.classList.contains('btn_in_the_cart')) {
-                        cart.innerText = 'In the cart';
+                    if(buttonBuy.classList.contains('btn_in_the_cart')) {
+                        buttonBuy.innerText = 'In the cart';
                     }else{
-                        cart.innerText = 'buy now';
+                        buttonBuy.innerText = 'buy now';
                     }
             })
         })
@@ -64,10 +64,7 @@
             }
         });
     };
-//AIzaSyDVJxwQNAiELSo-eDJIX6iHZKTzB1NTSfk
-//AIzaSyA6rzxK7JdhGxWOanC61q6X0V7Ya71YS8E
 
-//AIzaSyCkhmDU3eQvwvaFIrZiTxPMmWt3skFYwgk
     function initRequest() {      //инициализируем запрос (возвращаем fetch в initRequest())
         return fetch(`https://www.googleapis.com/books/v1/volumes?q=${querySubject}&key=AIzaSyC8YBwRI2UO8lk5k4S31Z77MyGZr_Lu_bI&printType=books&startIndex=${startIndex}&maxResults=6&langRestrict='en'`)
         .then((response) => {
@@ -87,7 +84,8 @@
 export async function resultRequest() {     
     const data = await initRequest();    // обрабатываем асинхронно запрос и записываем данные в const data
     const dataItems = data.items;
-    drawBooks(dataItems);             // отображаем запрос
+    drawBooks(dataItems);  
+    console.log(dataItems)           // отображаем запрос
     buttonBuy();
 };
 
