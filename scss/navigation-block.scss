@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'mixines';
 @import 'fonts';
+@import 'media';
 
 * {
     margin: 0px;
@@ -101,8 +102,8 @@
                 width: 13px;
                 height: 13px;
                 border-radius: 50%;
-                background-color: red;
-                color: white;
+                background-color: $red-color;
+                color: $white-color;
             }
         }
 }
