@@ -31,9 +31,12 @@
             .category-books_item {
 
                 &.active {
+                    position: relative;
+                    margin-left: -17px;
                     @include montserrat-bold;
                     font-weight: $font-700;
                     color: $bold-font;
+                    list-style: inside;
                 }
             }
         }

@@ -1,13 +1,14 @@
 import {allBooks, cartBooks} from './books';
 
 let id = '';
+let buttonBuy = '';
 
 export function addToCart() {             // меняем состояние кнопки и перпеключаем класс
     let buttonsBuyNow = document.querySelectorAll('.btn_buy-now');
     buttonsBuyNow.forEach((item) => {
         item.addEventListener('click', event => {
             let countBooks = document.querySelector('.nav-info_cart-flag'); //находим поле для счётчика в корзине
-            let buttonBuy = event.target.closest('.btn_buy-now');          //находим кнопку buy now
+            buttonBuy = event.target.closest('.btn_buy-now');          //находим кнопку buy now
             buttonBuy.classList.toggle('btn_in_the_cart') 
            
                 if(buttonBuy.classList.contains('btn_in_the_cart')) {     //меняем название кнопки от состояния 
@@ -59,3 +60,12 @@ function saveBooks(ev) {                    //сохраняем в Local кар
     };
 };
 
+/*  function localBooks() {   
+    
+    // отображаем из Local
+     if(localStorage.getItem('comments')) {
+        JSON.parse(localStorage.getItem('inCart') || '{}'); 
+    };
+};
+
+    localBooks(); */
