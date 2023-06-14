@@ -23,25 +23,28 @@
                         saveBooks(event);
                     }else{
                         buttonBuy.innerText = 'buy now';
-
-                        for( let i = 0; i < allBooks.length; i++){
-                            let resultForremove = allBooks[i];
-                            resultForremove.forEach((item, index) => {
-                                id = item.id;
-                                if(id == event.target.dataset.btnbuy) {
-
-                                    cartBooks.forEach((item, index) => {
-                                        if(item.id == id) {
-                                            cartBooks.splice(index, 1);
-                                    }
-                                });
-                                localStorage.setItem('inCart', JSON.stringify(cartBooks));
-                            };
-                        });
-                    };
+                        removeCart();
                 };
             });
         });
+    };
+
+    function removeCart() {
+        for( let i = 0; i < allBooks.length; i++){
+            let resultForremove = allBooks[i];
+            resultForremove.forEach((item, index) => {
+                id = item.id;
+                if(id == event.target.dataset.btnbuy) {
+
+                    cartBooks.forEach((item, index) => {
+                        if(item.id == id) {
+                            cartBooks.splice(index, 1);
+                    }
+                });
+                localStorage.setItem('inCart', JSON.stringify(cartBooks));
+            };
+        });
+    };
     };
 
     function saveBooks(ev) {
