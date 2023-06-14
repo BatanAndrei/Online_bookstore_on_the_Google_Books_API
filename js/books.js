@@ -11,7 +11,7 @@
     let cartBooks = [];
     let id = '';
 
-    function addToCart(booksItem) {             // меняем состояние кнопки и перпеключаем класс
+    function addToCart() {             // меняем состояние кнопки и перпеключаем класс
         let buttonsBuyNow = document.querySelectorAll('.btn_buy-now');
         buttonsBuyNow.forEach((item) => {
             item.addEventListener('click', event => {
@@ -33,17 +33,16 @@
                                     cartBooks.forEach((item, index) => {
                                         if(item.id == id) {
                                             cartBooks.splice(index, 1);
-                                        }
-                                    })
-                                    console.log(cartBooks);
-                                    localStorage.setItem('inCart', JSON.stringify(cartBooks));
-                                }
-                            })
-                        }
-                    }
-            })
-        })
-    }
+                                    }
+                                });
+                                localStorage.setItem('inCart', JSON.stringify(cartBooks));
+                            };
+                        });
+                    };
+                };
+            });
+        });
+    };
 
     function saveBooks(ev) {
         if(!ev.target.dataset.btnbuy) {
@@ -58,12 +57,10 @@
                     let found = resultForadd.find(element => element.id === id);
                     cartBooks.push(found)
                     localStorage.setItem('inCart', JSON.stringify(cartBooks)); 
-                    //console.log(found)
-                    //console.log(cartBooks);
-                }
-            })
-        } 
-    }
+                };
+            });
+        };
+    };
 
     export function nextLoadBooks() {                 // по клику отображаем следующие 6 книг
         btnLoadMore.addEventListener('click', () => {
@@ -75,7 +72,6 @@
             })
             querySubject = `subject:${nextLoadCat}`; // отображаем нужную категорию                 
             resultRequest();                      // снова отображаем запрос
-            //console.log(querySubject);
         });
     };
 
@@ -92,7 +88,6 @@
                 showCaseBooks.innerHTML = '';
                 querySubject = `subject:${nextLoadCat}`; // отображаем нужную категорию 
                 resultRequest();                        //снова отображаем запрос
-                //console.log(querySubject);
                 allBooks = [];                             //мвссив становиться пустым для новой каткгории
              });
         });
@@ -127,7 +122,7 @@ export async function resultRequest() {
     const dataItems = data.items;
     drawBooks(dataItems);
     allBooks.push(dataItems)            // отображаем запрос
-    addToCart(dataItems);
+    addToCart();
 };
 
  function drawBooks(booksItems) {    // рисуем запрос (книги)
