@@ -10,7 +10,7 @@ module.exports = {
         path: path.resolve(__dirname, 'bundle'), //output называем папку в которую собираем
         filename: 'main.js',                      // main.js называем файл в котором собираем
     },
-    mode: 'development',   // переключение между Dev и Prod и будет ли собранный файл минифицирован (dev=norm, prod=minific...)
+    mode: 'production',   // переключение между Dev и Prod и будет ли собранный файл минифицирован (dev=norm, prod=minific...)
     plugins: [new MiniCssExtractPlugin()], //, new ESLintPlugin({fix: true}) // вместо (options) прописываем ({fix: true}) 
     module: {
         rules: [            // правила для сборщикак css
