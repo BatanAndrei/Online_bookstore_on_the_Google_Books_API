@@ -20,7 +20,7 @@ export function addToCart() {             // меняем состояние к�
     });
 };
 
-function removeCart(ev) {
+function removeCart(ev) {                     //удаляем из карзины книгу
     for( let i = 0; i < allBooks.length; i++){
         let resultForremove = allBooks[i];
         resultForremove.forEach(item => {
@@ -38,7 +38,7 @@ function removeCart(ev) {
 };
 };
 
-function saveBooks(ev) {
+function saveBooks(ev) {                    //сохраняем в Local карзину
     if(!ev.target.dataset.btnbuy) {
         return;
     }
