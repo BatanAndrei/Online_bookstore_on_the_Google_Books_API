@@ -32,7 +32,7 @@
     function removeCart() {
         for( let i = 0; i < allBooks.length; i++){
             let resultForremove = allBooks[i];
-            resultForremove.forEach((item, index) => {
+            resultForremove.forEach(item => {
                 id = item.id;
                 if(id == event.target.dataset.btnbuy) {
 
