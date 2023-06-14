@@ -6,15 +6,18 @@ export function addToCart() {             // меняем состояние к�
     let buttonsBuyNow = document.querySelectorAll('.btn_buy-now');
     buttonsBuyNow.forEach((item) => {
         item.addEventListener('click', event => {
+            let countBooks = document.querySelector('.nav-info_cart-flag');
             let buttonBuy = event.target.closest('.btn_buy-now');
             buttonBuy.classList.toggle('btn_in_the_cart') 
            
                 if(buttonBuy.classList.contains('btn_in_the_cart')) {
                     buttonBuy.innerText = 'In the cart';
                     saveBooks(event);
+                    countBooks.innerText = cartBooks.length;
                 }else{
                     buttonBuy.innerText = 'buy now';
                     removeCart(event);
+                    countBooks.innerText = cartBooks.length;
             };
         });
     });

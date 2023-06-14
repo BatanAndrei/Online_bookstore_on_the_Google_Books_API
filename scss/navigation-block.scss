@@ -87,6 +87,23 @@
                 @include nav-info-setting;
                 background-image: url(../svg/shop\ bag.svg);
             }
+
+            .nav-info_cart-flag {
+                position: relative;
+                top: 7px;
+                left: -32px;
+                padding-left: 3px;
+                @include montserrat-normal;
+                font-weight: $font-500;
+                font-size: 10px;
+                line-height: 12px;
+                text-transform: capitalize;
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                background-color: red;
+                color: white;
+            }
         }
 }
 
