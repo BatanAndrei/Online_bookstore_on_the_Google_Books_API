@@ -1,5 +1,5 @@
 import "./scss/allStyles.scss";
-import {navigation} from './js/navigation'; 
+import {slider} from './js/slider'; 
 
 
 
