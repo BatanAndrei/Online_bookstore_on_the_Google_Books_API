@@ -7,11 +7,12 @@
     let querySubject = 'subject:Architecture';
     let startIndex = 0;
     let nextLoadCat = '';
-    let cart = [];
+    let allBooks = [];
+    let cartBooks = [];
 
-    function addToCart() {             // меняем состояние кнопки и перпеключаем класс
+    function addToCart(booksItem) {             // меняем состояние кнопки и перпеключаем класс
         let buttonsBuyNow = document.querySelectorAll('.btn_buy-now');
-        buttonsBuyNow.forEach((item, index) => {
+        buttonsBuyNow.forEach((item) => {
             item.addEventListener('click', event => {
                 let buttonBuy = event.target.closest('.btn_buy-now');
                 buttonBuy.classList.toggle('btn_in_the_cart') 
@@ -31,17 +32,20 @@
         if(!ev.target.dataset.btnbuy) {
             return;
         }
-        let bookInCart = JSON.parse(localStorage.getItem('inCart'));
-        for( let i = 0; i < cart.length; i++){
-            let resultFor = cart[i];
+        //console.log(itm.id)
+        //let bookInCart = JSON.parse(localStorage.getItem('inCart'));
+        for( let i = 0; i < allBooks.length; i++){
+            let resultFor = allBooks[i];
             resultFor.forEach(item => {
                 let id = item.id;
                 if(id == ev.target.dataset.btnbuy) {
-                    let found = resultFor.find(element => element.id === id) 
+                    let found = resultFor.find(element => element.id === id);
+                    cartBooks.push(found)
+                    localStorage.setItem('inCart', JSON.stringify(cartBooks)); 
                     console.log(found)
                 }
             })
-        }
+        } 
     }
 
     export function nextLoadBooks() {                 // по клику отображаем следующие 6 книг
@@ -72,7 +76,7 @@
                 querySubject = `subject:${nextLoadCat}`; // отображаем нужную категорию 
                 resultRequest();                        //снова отображаем запрос
                 //console.log(querySubject);
-                cart = [];                             //мвссив становиться пустым для новой каткгории
+                allBooks = [];                             //мвссив становиться пустым для новой каткгории
              });
         });
     };
@@ -105,8 +109,8 @@ export async function resultRequest() {
     const data = await initRequest();    // обрабатываем асинхронно запрос и записываем данные в const data
     const dataItems = data.items;
     drawBooks(dataItems);
-    cart.push(dataItems)            // отображаем запрос
-    addToCart();
+    allBooks.push(dataItems)            // отображаем запрос
+    addToCart(dataItems);
 };
 
  function drawBooks(booksItems) {    // рисуем запрос (книги)
