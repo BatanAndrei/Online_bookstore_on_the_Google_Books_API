@@ -2,4 +2,6 @@
 
 В проекте установлены => sass, webpack, webpack-dev-server, eslinter(отключён)
 
-запуск проекта через команду npm run start:dev
+запуск сборки через команду npm run build
+
+запуск dev-server через команду npm run start:dev
