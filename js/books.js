@@ -35,6 +35,7 @@ import {addToCart} from './cart';
                     nextLoadCat = item.innerText;       // находим активную категорию
                 }
                 showCaseBooks.innerHTML = '';
+                
                 querySubject = `subject:${nextLoadCat}`; // отображаем нужную категорию 
                 resultRequest();                        //снова отображаем запрос
                 allBooks = [];                      //мвссив становиться пустым для новой каткгории
