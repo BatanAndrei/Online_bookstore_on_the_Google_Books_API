@@ -13,7 +13,8 @@ import {addToCart} from './cart';
     
     export function nextLoadBooks() {                 // по клику отображаем следующие 6 книг
         btnLoadMore.addEventListener('click', () => {
-            startIndex += 6;                           // меняем значение начального индекса (книги следующие отображаются с индекса номер 6)
+            startIndex += 6;  // меняем значение начального индекса (книги следующие отображаются с индекса номер 6)
+
             linkCategoryBooks.forEach(item => {
                 if(item.classList.contains('active')) {    
                     nextLoadCat = item.innerText;          // находим активную категорию
@@ -26,6 +27,7 @@ import {addToCart} from './cart';
 
     export function toggleCategoryBooks() {              // переключам категории в блоке категорий
         linkCategoryBooks.forEach(item => {
+
             item.addEventListener('click', event => {
                 let targetCategory = event.target.closest('.category-books_item');
                 removeActiveCategory();                 // убираем класс active с категории
@@ -45,6 +47,7 @@ import {addToCart} from './cart';
 
     function removeActiveCategory() {  //убираем класс active с категории
         linkCategoryBooks.forEach(item => {
+
             if(item.classList.contains('active')){
                 item.classList.remove('active');
             }
@@ -130,6 +133,5 @@ export async function resultRequest() {
       //console.log(item.volumeInfo.categories[0])  // в API не правильно отображаются категории (не работает q=subject:Category)
       showCaseBooks.innerHTML += books;
     });
-    return booksItems;
  }
 
