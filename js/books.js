@@ -28,8 +28,8 @@ import {addToCart} from './cart';
         linkCategoryBooks.forEach(item => {
             item.addEventListener('click', event => {
                 let targetCategory = event.target.closest('.category-books_item');
-                removeActiveCategory();                 // убираем класс active
-                targetCategory.classList.add('active'); // добавляем класс active
+                removeActiveCategory();                 // убираем класс active с категории
+                targetCategory.classList.add('active'); // добавляем класс active к категории
 
                 if(item.classList.contains('active')) {
                     nextLoadCat = item.innerText;       // находим активную категорию
@@ -42,7 +42,7 @@ import {addToCart} from './cart';
         });
     };
 
-    function removeActiveCategory() {  //убираем класс active
+    function removeActiveCategory() {  //убираем класс active с категории
         linkCategoryBooks.forEach(item => {
             if(item.classList.contains('active')){
                 item.classList.remove('active');
